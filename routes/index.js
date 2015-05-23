@@ -10,7 +10,7 @@ var questions = {
     ],
     "Economics"    : [
         {"question" : "Taylor rule",
-         "answer"   : "$$\\text{central bank policy rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
+         "answer"   : "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
         }
     ],
     "CorporateFin" : [
@@ -29,6 +29,11 @@ router.get('/', function(req, res, next) {
     var question = qList[Math.floor(Math.random() * qList.length)];
   res.render('index', { category: category, "question": question["question"], "answer": question["answer"]});
 });
+
+router.get('/bootstrap', function(req, res, next) {
+    res.render('bootstrap');
+});
+
 
 
 module.exports = router;

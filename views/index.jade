@@ -1,7 +1,68 @@
-extends layout
+//extends layout
+//
+//
+//block content
+//  h1= category
+//  p #{question}
+//     p #{answer}
+//
+//
+doctype html
+html(lang='en')
+        head
+            meta(charset='utf-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            meta(name='description', content='')
+            meta(name='author', content='')
+
+            link(rel='stylesheet', href='/stylesheets/style.css')
 
 
-block content
-  h1= category
-  p #{question}
-     p #{answer}
+            link(rel='icon', href='#{pathToAssets}/docs/favicon.ico')
+            title Narrow Jumbotron Template for Bootstrap
+            // Bootstrap core CSS
+            link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+            // Custom styles for this template
+            link(href='/bootstrap/css/jumbotron-narrow.css', rel='stylesheet')
+            // Just for debugging purposes. Don't actually copy these 2 lines!
+            //if lt IE 9
+              script(src='#{pathToAssets}/docs/assets/js/ie8-responsive-file-warning.js')
+            script(src='#{pathToAssets}/docs/assets/js/ie-emulation-modes-warning.js')
+            // IE10 viewport hack for Surface/desktop Windows 8 bug
+            script(src='#{pathToAssets}/docs/assets/js/ie10-viewport-bug-workaround.js')
+            script(type="text/x-mathjax-config").
+                 MathJax.Hub.Config({
+                     tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+                     "HTML-CSS": {
+                         linebreaks: { automatic: true, width: "container" }
+                     }
+                 });
+            script(type='text/javascript', src= "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+            script(type='text/javascript', src="/javascripts/jquery-2.1.1.min.js")
+            script(type='text/javascript', src="/javascripts/main.js")
+
+
+
+            // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+            //if lt IE 9
+              script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+              script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        body
+            .container
+                .header
+
+                    h3.text-muted CFA formulas
+                .jumbotron
+                    h1 #{category}
+                    p.lead #{question}
+                    div.wrapping#answerBox #{answer}
+                    p#showAnswerButton
+                        a.btn.btn-lg.btn-success(href='#', role='button', onclick='showAnswer()') Show answer
+
+                .footer
+                    p &copy; CFA formulas 2015
+            // /container
+            // Bootstrap core JavaScript
+            // ==================================================
+            // Placed at the end of the document so the pages load faster
