@@ -56,9 +56,22 @@ html(lang='en')
                 .jumbotron
                     h1 #{category}
                     p.lead #{question}
-                    div.wrapping#answerBox #{answer}
                     p#showAnswerButton
                         a.btn.btn-lg.btn-success(href='#', role='button', onclick='showAnswer()') Show answer
+                    div.wrapping#answerBox #{answer}
+                    h10.comment#commentBox (Please reload page to obtain a new question)
+
+                .row.marketing
+                    .col-lg-6
+                        h4 CFA
+                        p
+                            | Exam for investment and financial professionals.
+                    .col-lg-6
+                        h4 About
+                        p
+                            | Webpage delivers simple tool for learning formulas to the exam
+
+
 
                 .footer
                     p &copy; CFA formulas 2015

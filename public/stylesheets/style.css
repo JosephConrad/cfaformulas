@@ -1,4 +1,9 @@
-.wrapping { 
+.wrapping {
+    visibility: hidden;
     font-size: xx-large;
+    word-wrap: break-word;
+}
+.comment {
+    visibility: hidden; 
     word-wrap: break-word;
 }
