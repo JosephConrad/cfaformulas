@@ -1,24 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var questions = {
-    //"ethics"       : {},
-    "Quantitative" : [
-        {"question" : "Formula for correlation",
-         "answer"   : "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$"
-        }
-    ],
-    "Economics"    : [
-        {"question" : "Taylor rule",
-         "answer"   : "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
-        }
-    ],
-    "CorporateFin" : [
-        {"question" : "Calculation of residual inscome:",
-         "answer"   : "$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$"
-        }
-    ]
-}
+var questions = require('../database/questions.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

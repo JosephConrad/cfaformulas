@@ -1,0 +1,29 @@
+{
+  "Quantitative Methods": [
+    {
+      "question": "Formula for correlation",
+      "answer": "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$"
+    }
+  ],
+  "Economics": [
+    {
+      "question": "Taylor rule",
+      "answer": "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
+    }
+  ],
+  "Corporate Finance": [
+    {
+      "question": "Calculation of residual inscome:",
+      "answer": "$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$"
+    },
+    {
+      "question": "NPV of the investment ",
+      "answer": "$$ NPV = \\sum_{t=1}^{\\infty} \\frac{TI_t}{(1+r_e)^t} $$"
+    },
+    {
+      "question": "Initial investment outlay ",
+      "answer": "$$ outlay = FCInv - NWCInv $$"
+    }
+  ]
+}
+
