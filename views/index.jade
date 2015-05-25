@@ -49,7 +49,7 @@ html(lang='en')
                     p.lead #{question}
                     p#showAnswerButton
                         a.btn.btn-lg.btn-success(href='#', role='button', onclick='showAnswer()') Show answer
-                    div.wrapping#answerBox #{answer}
+                    div.wrapping#answerBox !{answer}
                     h10.comment#commentBox (Please reload page to obtain a new question)
 
                 .row.marketing

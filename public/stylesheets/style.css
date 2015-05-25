@@ -2,6 +2,7 @@
     visibility: hidden;
     font-size: xx-large;
     word-wrap: break-word;
+    text-align: left;
 }
 .comment {
     visibility: hidden; 

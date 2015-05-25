@@ -2,27 +2,58 @@
   "Quantitative Methods": [
     {
       "question": "Formula for correlation",
-      "answer": "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$"
+      "answer": "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$",
+      "type": "m"
+    },
+    {
+      "question": "Mean reverting level",
+      "answer": "$$ \\frac{b_0}{(1-b_1)} $$",
+      "type": "m"
+      
     }
   ],
   "Economics": [
     {
       "question": "Taylor rule",
-      "answer": "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
+      "answer": "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$",
+      "type": "m"
+    },
+    {
+      "question": "",
+      "answer": "$$ $$",
+      "type": "m"
+    },
+    {
+      "question": "Please give formula for CROSS RATES with bid-ask spreads",
+      "answer": "$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$",
+      "type": "m"
+    },
+    {
+      "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
+      "answer": "$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ",
+      "type": "m"
     }
   ],
   "Corporate Finance": [
     {
       "question": "Calculation of residual inscome:",
-      "answer": "$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$"
+      "answer": "$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$",
+      "type": "m"
     },
     {
       "question": "NPV of the investment ",
-      "answer": "$$ NPV = \\sum_{t=1}^{\\infty} \\frac{TI_t}{(1+r_e)^t} $$"
+      "answer": "$$ NPV = \\sum_{t=1}^{\\infty} \\frac{TI_t}{(1+r_e)^t} $$",
+      "type": "m"
     },
     {
       "question": "Initial investment outlay ",
-      "answer": "$$ outlay = FCInv - NWCInv $$"
+      "answer": "$$ outlay = FCInv - NWCInv $$",
+      "type": "m"
+    },
+    {
+      "question": "Categories of capital budgeting projects",
+      "answer": "<ol> <li>Replacement projects</li> <li>Replacement projects for cost reduction</li><li>Expansion projects</li> <li>New products or market</li><li>Mandatory projects</li><li>Other projects (e.g., R&D projects)</li> </ol>",
+      "type": "e"
     }
   ]
 }
