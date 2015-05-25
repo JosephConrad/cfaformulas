@@ -2,58 +2,153 @@
   "Quantitative Methods": [
     {
       "question": "Formula for correlation",
-      "answer": "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$",
-      "type": "m"
+      "answer": "[$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$]"
     },
     {
       "question": "Mean reverting level",
-      "answer": "$$ \\frac{b_0}{(1-b_1)} $$",
-      "type": "m"
-      
+      "answer": "[$$ \\frac{b_0}{(1-b_1)} $$]"
     }
   ],
   "Economics": [
     {
       "question": "Taylor rule",
-      "answer": "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$",
-      "type": "m"
+      "answer": "[$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$]"
     },
     {
       "question": "",
-      "answer": "$$ $$",
-      "type": "m"
+      "answer": ["$$ $$"]
     },
     {
       "question": "Please give formula for CROSS RATES with bid-ask spreads",
-      "answer": "$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$",
-      "type": "m"
+      "answer": "[$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$]"
     },
     {
       "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
-      "answer": "$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ",
-      "type": "m"
+      "answer": "v$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ]"
     }
   ],
   "Corporate Finance": [
     {
+      "question": "Categories of capital budgeting projects",
+      "answer": ["<ol> <li>Replacement projects to maintain the business</li> <li>Replacement projects for cost reduction</li><li>Expansion projects</li> <li>New products or market</li><li>Mandatory projects</li><li>Other projects (e.g., R&D projects)</li> </ol>"]
+    },
+    {
+      "question": "Principles of Capital budgeting ",
+      "answer": [
+        "<ol>",
+        "<li>Decisions are based on cash flows, not accounting income (incremental cash flows)</li>",
+        "<li>Cash flows are based on opportunity cost</li>",
+        "<li>The timing of cash flows is important</li>",
+        "<li>CF are analyzed on an after-tax basis</li>",
+        "<li>Financing costs are reflected in the project's required rate of return</li>",
+        "</ol>"
+      ]
+    },
+    {
+      "question": "Enumerate depreciation methods and implication for the after-tax cash flows of a capital project",
+      "answer": [
+        "<ol>",
+        "<li>Straight line. Used for financial reporting.</li>",
+        "<li>$MARCS$ (modified accelerated cost recovery system). Used for TAX purposes. Assets are classified into $3-,5-,7-,10-$year classes</li>",
+        "</ol>"
+      ]
+    },
+    {
+      "question": "What is depreciation basis in $MACRS$",
+      "answer": ["Depreciation basis $=$ purchase price $+$ + shipping or handling cost $+$ installation cost"]
+    },
+    {
       "question": "Calculation of residual inscome:",
-      "answer": "$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$",
-      "type": "m"
+      "answer": ["$$ RI_{t} = NI_{t} - r_e B_{t-1}  $$"]
     },
     {
       "question": "NPV of the investment ",
-      "answer": "$$ NPV = \\sum_{t=1}^{\\infty} \\frac{TI_t}{(1+r_e)^t} $$",
-      "type": "m"
+      "answer": ["$$ NPV = \\sum_{t=1}^{\\infty} \\frac{TI_t}{(1+r_e)^t} $$"]
     },
     {
       "question": "Initial investment outlay ",
-      "answer": "$$ outlay = FCInv - NWCInv $$",
-      "type": "m"
+      "answer": ["$$ outlay = FCInv + NWCInv $$"]
     },
     {
-      "question": "Categories of capital budgeting projects",
-      "answer": "<ol> <li>Replacement projects</li> <li>Replacement projects for cost reduction</li><li>Expansion projects</li> <li>New products or market</li><li>Mandatory projects</li><li>Other projects (e.g., R&D projects)</li> </ol>",
-      "type": "e"
+      "question": "",
+      "answer": ["$$ $$"]
+    },
+    {
+      "question": "Definition of NWCInv",
+      "answer": ["$$NWCInv = \\Delta \\text{non-cash current assets} + \\Delta \\text{non-cash current liabilities} = \\Delta NWC$$"]
+    },
+    {
+      "question": "Definition After-tax operating CF ",
+      "answer": ["are incremental cash flows over the capital asset's economic life. $$CF = (S-C-D)(1-T) + D$$"]
+    },
+    {
+      "question": "Definition of Terminal year after-tax non-operating CF ($TNOCF$)",
+      "answer": [
+        "$$TNOCF = SAL_T + NWCInv - T (SAL_T - B_T)$$",
+        "where: <br> $Sal_T$ = pre-tax cash proceeds from sale of fixed capital<br>",
+        "$B_T$ = book value of the fixed capital sold"
+      ]
+    },
+    {
+      "question": "Initial investment outlay for replacement project",
+      "answer": ["$$ outlay = FCInv + NWCInv - Sal_0 + T(Sal_0 - B_0)$$"]
+    },
+    {
+      "question": "Definition After-tax operating CF in replacement project",
+      "answer": ["are incremental cash flows over the capital asset's economic life. $$\\Delta CF = (\\Delta S- \\Delta C)(1-T) + \\Delta DT$$"]
+    },
+    {
+      "question": "Definition of Terminal year after-tax non-operating CF ($TNOCF$) in replacement project",
+      "answer": [
+        "$$TNOCF = Sal_{TNew} - sal_{TOld} + NWCInv - T (SAL_TNew - B_TNew) - (SAL_TOld - B_TOld)$$",
+        "where: <br> $Sal_T$ = pre-tax cash proceeds from sale of fixed capital<br>",
+        "$B_T$ = book value of the fixed capital sold"
+      ]
+    },
+    {
+      "question": "Target payout ratio adjustment model",
+      "answer": [
+        "$$ \\text{expected dividend} = PD + (E[\\Delta EPS] \\cdot TPR \\cdot AF) $$",
+        "where: <br> $AF$ - adjustment factor = 1 / number of years over which the adjustment in dividends will take place<br>",
+        "$TPR$ - target payout ratio<br>",
+        "Used when company earnings are expected to increase and the current payut ratio is below the target"
+      ]
+    },
+    {
+      "question": "Target payout ratio adjustment model",
+      "answer": [
+        "$$ \\text{expected dividend} = PD + (E[\\Delta EPS] \\cdot TPR \\cdot AF) $$",
+        "where: <br> $AF$ - adjustment factor = 1 / number of years over which the adjustment in dividends will take place<br>",
+        "$TPR$ - target payout ratio<br>",
+        "Used when company earnings are expected to increase and the current payut ratio is below the target"
+      ]
+    },
+    {
+      "question": "MM model I (no taxes)",
+      "answer": ["$$ V_L = V_U$$"]
+    },
+    {
+      "question": "MM model II (no taxes) with leverage",
+      "answer": [
+        "$$ r_e = r_0 + \\frac{D}{E}(r_0 - r_d) $$",
+        "As leverage increases, the cost of equity increases, but $WACC$ and the cost of debt are unchanged"
+      ]
+    },
+    {
+      "question": "MM model I (with taxes), value is maximized at 100% debt",
+      "answer": ["$$ V_L = V_U + (t \\cdot d)$$"]
+    },
+    {
+      "question": "MM model II (with taxes)",
+      "answer": ["$$ r_e = r_0 + \\frac{D}{E}(r_0 - r_d) (1-T_C)$$"]
+    },
+    {
+      "question": "According to tatic trade-off theory, value of a levered firm is:",
+      "answer": ["$$ V_L = V_U + (t \\cdot d) - PV (\\text{costs of financial distress})$$"]
+    },
+    {
+      "question": "Formula for economic profit",
+      "answer": ["$$ EP = NOPAT - $WACC = EBIT(1-\\text{tax rate}) - WACC \\cdot capital$$"]
     }
   ]
 }

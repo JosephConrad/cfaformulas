@@ -1,10 +1,10 @@
 .wrapping {
     visibility: hidden;
-    font-size: xx-large;
+    font-size: large;
     word-wrap: break-word;
     text-align: left;
 }
 .comment {
-    visibility: hidden; 
+    visibility: hidden;
     word-wrap: break-word;
 }
