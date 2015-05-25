@@ -10,8 +10,8 @@ router.get('/', function(req, res, next) {
     //var category = keys[Math.floor(Math.random() * keys.length)];
     var category = "Corporate Finance"
     var qList = questions[category];
-    //var question = qList[Math.floor(Math.random() * qList.length)];
-    var question = qList[qList.length - 1];
+    var question = qList[Math.floor(Math.random() * qList.length)];
+    //var question = qList[qList.length - 1];
   res.render('index', { category: category, "question": question["question"], "answer": question["answer"].join('\n')});
 });
 
