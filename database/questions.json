@@ -150,6 +150,563 @@
       "question": "Formula for economic profit",
       "answer": ["$$ EP = NOPAT - $WACC = EBIT(1-\\text{tax rate}) - WACC \\cdot capital$$"]
     }
-  ]
+  ],
+  "Alternative investment": {
+    "Private RE investments": [
+      {
+        "question": "Debt service coverage ratio",
+        "answer": ["$$ DSCR = \\frac{\\text{first-year NOI}}{\\text{debt service}}$$"]
+      },
+      {
+        "question": "Loan-to-value",
+        "answer": ["$$ LTV = \\frac{\\text{loan amount}}{\\text{appraisal value}}$$"]
+      },
+      {
+        "question": "Maximum loan on a specific property that lender can offer",
+        "answer": ["$$ loan = \\min(DSCR, LTV)$$"]
+      },
+      {
+        "question": "Equity dividend rate (cash-on-cash return)",
+        "answer": [
+          "Measures the cash return on the amount of cash invested",
+          "$$ \\text{equity divident rate} = \\frac{\\text{first year cash flow}}{\\text{equity}}$$",
+          "It covers only one period (IRR measures the whole period"
+        ]
+      },
+      {
+        "question": "Return on NPI (NCREIF Property Index)",
+        "answer": [
+          "$$ return = \\frac{NOI - CapExpend + (MV_{end} - MV_{begin})}{MV_{begin}}$$",
+          "Members of NCREIF (mainly investment managers and pension fund sponsors), submit appraisal data quarterly)"
+        ]
+      },
+      {
+        "question": "Basic forms of Real Estate Investments",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td> </td>",
+          "<td>Debt</td>",
+          "<td>Equity</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Private</td>",
+          "<td>Mortgages</td>",
+          "<td>Direct Investments (as sole partnership)</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Public</td>",
+          "<td>MBS</td>",
+          "<td>Shares of REITs and REOCs</td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Real estate characteristics (differnces vs assets like bonds or stocks)",
+        "answer": [
+          "<ol>",
+          "<li>Heterogeneity </li>",
+          "<li>High unit value </li>",
+          "<li>Active management </li>",
+          "<li>High transaction costs </li>",
+          "<li>Depreciation and desirability (buildings may become less desirable  </li>",
+          "<li> Cost and availability of debt capital </li>",
+          "<li> Lack of liquidity </li>",
+          "<li> Difficulty in determining price  </li>",
+          "</ol>",
+          "REITs overcome many ot these problems"
+        ]
+      },
+      {
+        "question": "Reasons to invest in real estate",
+        "answer": [
+          "<ol>",
+          "<li>Current income </li>",
+          "<li>Capital appreciation </li>",
+          "<li>Inflation hedge</li>",
+          "<li>Diversification</li>",
+          "<li>Tax benefits (depreciable life of real estat is shorter than acutal life, REIT does not pay taxes in some counteries) </li>",
+          "/<ol>"
+        ]
+      },
+      {
+        "question": "Drivers of demand for various properites types",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td> </td>",
+          "<td>Driver</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Office</td>",
+          "<td>Job Growth</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Industrial</td>",
+          "<td>Overall economy</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Retail</td>",
+          "<td>Consumer spending</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Multi-family</td>",
+          "<td>Population growth</td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Highest and best use",
+        "answer": [
+          "highest and best use of a vacant site is the USE that would result in the HIGHEST VALUE for the land"
+        ]
+      },
+      {
+        "question": "Highest and best use",
+        "answer": [
+          "highest and best use of a vacant site is the USE that would result in the HIGHEST VALUE for the land"
+        ]
+      },
+      {
+        "question": "NOI (Net Operating Income) (Direct capitalization)",
+        "answer": [
+
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>Rental income if fully occupied </td>",
+          "</tr>",
+          "<tr>",
+          "<td>$+$ Other income</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ Potential Gross Income</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ Vacancy and collection loss</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ Effective gross income</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ Operating expense</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ Net operating income</td>",
+          "</tr>",
+          "</table>"
+        ]
+      }
+    ],
+    "PE Valuation": [
+      {
+        "question": "Source of the PE firms' ability to add greater value to their portfolio companies",
+        "answer": [
+          "<ol>",
+          "<li>The ability to re-engineer the portfolio </li>",
+          "<li>Ability to obtain debt financing on more advantageous terms</li>",
+          "<li>Superior alignment of interests between management and PE owenershiop</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Control mechanisms to align the interests of the managers of portfolio companies with the private equity firms' interests",
+        "answer": [
+          "<ol>",
+          "<li>COMPENSATION - closely linked to the company's performance</li>",
+          "<li>TAG-ALONG, DRAG-ALONG CLAUSES - acquisition offer it should be also extended to management of target not only the main controlling shareholder</li>",
+          "<li>BOARD REPRESENTATION - PE firm is ensured control throudgh board repr</li>",
+          "<li>NONCOMPETE CLAUSES - company founders must agree to clouses that prevent them from competing against the firm</li>",
+          "<li>PRIORITY IN CLAIMS - PE firms receive their distributions befor other owners</li>",
+          "<li>REQUIRED APPROVALS - changes of strategic importance must be approved by PE firms</li>",
+          "<li>EARN-OUTS - used predominantly in venture capital investments. For example, a venture capital firm may buy a portfolio company for $100 million with the agreement that additional payments of $1 million will be made to the management team for the next five years if the portfolio company exceeds agreed performance targets.</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Main forms of PE investments",
+        "answer": [
+          "<ol>",
+          "<li>VC - specific industry focus and emphasize REVENUE GROWTH</li>",
+          "<li>BUYOUTS - emphasis is on EBIT or EBITDA growth</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Enumerate PE valuation methodologies",
+        "answer": [
+          "<ol>",
+          "<li>DCF analysis (significant operating history)</li>",
+          "<li>Relative value (market applorach) (applies a price multiple)</li>",
+          "<li>REAL OPTION ANALYSIS (immature companies)</li>",
+          "<li>REPLACEMENT COST (not applicable to mature companies)</li>",
+          "<li>VENTURE CAPITAL METHOD</li>",
+          "<li>LEVERAGED BUYOUT METHOD</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Types of buyouts",
+        "answer": [
+          "<ol>",
+          "<li>Takeovers</li>",
+          "<li>Management buyouts (MBOs)</li>",
+          "<li>Leveraged boyouts (LBOs)</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "LBO model",
+        "answer": [
+          "THe LBO model has 3 main inputs:",
+          "<ol>",
+          "<li>The target company's forecasted cash flows (provided by the target's mangement but scrutinized by the PE firm)</li>",
+          "<li>The expected returns to providers of the financing</li>",
+          "<li>The total amount of financing</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Exit value",
+        "answer": [
+          "$$\\text{exit value} = IC + EG + \\Delta PM + DR  $$",
+          "where: <br>",
+          "<ol>",
+          "<li>$IC$ = investment cost</li>",
+          "<li>$EG$ - earnings grwoth</li>",
+          "<li>$\\Delta PM $ - increase in price multiple</li>",
+          "<li>$DR$ - reduction in debt</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Post-money valuation",
+        "answer": ["$$ PRE + INV = POST $$"]
+      },
+      {
+        "question": "Ownership proportion of the venture capital (VC)",
+        "answer": ["$$ \\text{Ownership proportion} = \\frac{INV}{POST} $$"]
+      },
+      {
+        "question": "Types of exit routes",
+        "answer": [
+          "<ol>",
+          "<li>IPO</li>",
+          "<li>Secondary market sale</li>",
+          "<li>Management Buyout (MBO)</li>",
+          "<li>Liquidation</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Forms of ownership structure for private equity funds",
+        "answer": [
+          "<ol>",
+          "<li>Limited partnership (Limited partner provide funding and not have an active role in management and have limited liability. General parner has unlimited liability and manages the fund)</li>",
+          "<li>Company limited by shares - offers better legal protection</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Categorization of the terms of the fund ",
+        "answer": [
+          "The terms of the fund should be focused towards aligning the interests of the GP and LP and they are:",
+          "<ol>",
+          "<li>Economic terms</li>",
+          "<li>Corporate governance terms</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Economic Terms of the private equity",
+        "answer": [
+          "<ol>",
+          "<li>MANAGEMENT FEES (2% of committed capital or NAV or paid-in capital</li>",
+          "<li>TRANSACTION FEES (paid by third parties to the GP in their advisory capacity</li>",
+          "<li>CARRIED INTERESTS/PERFORMANCE FEES (20% of profits, after management fees)</li>",
+          "<li>RATCHET (can increase its equity % if they meet performance targets set up by PE firm)</li>",
+          "<li>HURDLE RATE - the IRR that the fund must meet before the GP can received carried interests</li>",
+          "<li>TARGET FUND SIZE - started total maximum size of the PE fund</li>",
+          "<li>VINTAGE - first year (facilitate performance comparisons with other funds)</li>",
+          "<li>TERM OF THE FUND - the life of the firm </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Corporate Governance Terms of the private equity",
+        "answer": [
+          "Provide the legal arrangements for the control of the fund",
+          "<ol>",
+          "<li>KEY MAN CLAUSE - if a key named executive leaves the fund or does not spend a  sufficient amount of time at the fund</li>",
+          "<li>PERFORMANCE DISCLOSURE AND CONFIDENTIALITY - fund performance information that can be disclosed</li>",
+          "<li>CLAWBACK - is a protection to the LP when things go bad (usually settled at termination of the fund), GP must even return its profits</li>",
+          "<li>DISTRIBUTION WATERFALL - similar to LP = Preferred stockholders and GP = Common stockholder.</li>",
+          "<li>TAG-ALONG, DRAG-ALONG CLAUSES - acquisition offer it should be also extended to management of target not only the main controlling shareholder</li>",
+          "<li>NO-FAULT DIVORCE - allow GP to be fired when 75% of LPs agree to do so</li>",
+          "<li>REMOVAL FOR CAUSE - GP can be fired, given sufficient cause</li>",
+          "<li>INVESTMENT RESTRICTIONS - specify leverage limits</li>",
+          "<li>CO-INVESTMENT - allows a LP to invest in other funds of the GP at low or no management fees</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "IRR measures for PE",
+        "answer": [
+          "<ol>",
+          "<li>GROSS IRR - gross of fees, ability to generate a return from portfolio comapnies</li>",
+          "<li>NET IRR - net of fees, measure for CF between fund and LPs</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "MULTIPLES measures for PE",
+        "answer": [
+          "<ol>",
+          "<li>PIC - capital utlized by GP</li>",
+          "<li>DPI - realized return </li>",
+          "<li>RVPI - unrealized return </li>",
+          "<li>TVPI - realized and unralized return </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Rule for benchmarking a performance of a private equity funds",
+        "answer": [
+          "Funds should be benchamarked against peers of the same vintage (Vintage year - refers to the year the fund was set up"
+        ]
+      },
+      {
+        "question": "Capital call (draw down or a capital commitment)",
+        "answer": [
+          "is a legal right of an investment firm or an insurance firm to DEMAND A PORTION OF THE MONEY promised to it by an investor"
+        ]
+      },
+      {
+        "question": "NAV before distributions",
+        "answer": [
+          "NAV before distributions = NAV after distributions in prior year + capital called down - management fees + operating results"
+        ]
+      },
+      {
+        "question": "NAV after distributions",
+        "answer": [
+          "NAV after distributions = NAV before distributions - carried interests - distributions"
+        ]
+      },
+      {
+        "question": "Post-money value (at the time of a new investment in the company",
+        "answer": [
+          "$$POST = PV (\\text{exit value})$$<br>",
+          "(the discounted present value of the estimated exit value)"
+        ]
+      },
+      {
+        "question": "The fraction of VC ownership (NPV method)",
+        "answer": [
+          "$$f = \\frac{INV}{POST}$$ <br>",
+          "where: <br>",
+          "$POST = \\frac{\\text{exit value}}{(1+r)^n}$"
+        ]
+      },
+      {
+        "question": "The fraction of VC ownership (IRR method)",
+        "answer": [
+          "$$f = \\frac{FV(INV)}{\\text{exit value}}$$ <br>"
+        ]
+      },
+      {
+        "question": "Shares issued to VC based on the number of existing shares",
+        "answer": [
+          "$$shares_{VC} = shares_{Founders} \\frac{f}{1-f}$$"
+        ]
+      },
+      {
+        "question": "The price per share at the time of the investment",
+        "answer": [
+          "$$price = \\frac{INV}{shares_{VC}}$$"
+        ]
+      },
+      {
+        "question": "Adjusting the DISCOUNT RATE",
+        "answer": [
+          "$$r^*=\\frac{1+r}{1-q}-1 $$<br>",
+          "where:<br>",
+          "$r^*$ = discount rate unadjusted for probability of failure"
+        ]
+      },
+      {
+        "question": "What year are carried interest first paid",
+        "answer": [
+          "Condition: NAV before distributions $\\gt$ commited capital"
+        ]
+      },
+      {
+        "question": "DPI (distributed to paid-in capital)",
+        "answer": [
+          "$$DPI = \\frac{\\text{cumulative distributions}}{\\text{paid-in capital}}$$"
+        ]
+      },
+      {
+        "question": "RVPI (residual value to paid-in capital)",
+        "answer": [
+          "$$RVPI = \\frac{\\text{NAV after distributions}}{\\text{paid-in capital}}$$"
+        ]
+      },
+      {
+        "question": "TVPI (total value to paid-in capital)",
+        "answer": [
+          "$$TVPI = DPI + RVPI$$"
+        ]
+      },
+      {
+        "question": "PIC (paid-in capital)",
+        "answer": [
+          "$$PIC =  \\frac{\\text{paid-in capital}}{\\text{committed capital}}$$"
+        ]
+      },
+      {
+        "question": "New fractional ownership from the investment $f_2$, if there is second round of VC financing",
+        "answer": [
+          "$$ f_2 = \\frac{INV_2}{POST_2} $$"
+        ]
+      },
+      {
+        "question": "Post-money value after the second round investment $POST_2$, if there is second round of VC financing",
+        "answer": [
+          "$$ POST_2 = \\frac{\\text{exit value}}{(1+r_2)^{n2}} $$"
+        ]
+      },
+      {
+        "question": "Pre-money value $PRE_2$, if there is second round of VC financing",
+        "answer": [
+          "$$ PRE_2 = POST_2 - INV_2 $$"
+        ]
+      },
+      {
+        "question": "Pre-money value $PRE_2$, if there is second round of VC financing",
+        "answer": [
+          "$$ PRE_2 = POST_2 - INV_2 $$"
+        ]
+      },
+      {
+        "question": "Post-money value $POST_1$, if there is second round of VC financing",
+        "answer": [
+          "$$ POST_1 = \\frac{PRE_2}{(1+r_1)^{n1}} $$"
+        ]
+      },
+      {
+        "question": "The new shares required to be issued to the VC in return for the FIRST round financing amount ($INV_1$) and the price per share, if there is second round of VC financing",
+        "answer": [
+          "$$shares_{VC1} = shares_{Founders} \\frac{f_1}{1-f_1}$$",
+          "$$ price_1 = \\frac{INV_1}{shares_{VC1}}$$"
+        ]
+      },
+      {
+        "question": "The new shares required to be issued to the VC in return for the SECOND round financing amount ($INV_2$) and the price per share",
+        "answer": [
+          "$$shares_{VC2} = shares_{Founders} \\frac{f_2}{1-f_2}$$",
+          "$$ price_2 = \\frac{INV_2}{shares_{VC2}}$$"
+        ]
+      },
+      {
+        "question": "Required fractional ownership after dilution by the second round",
+        "answer": [
+          "$$ f_{1diluted} =  f_1 \\cdot (1 - f_2)$$"
+        ]
+      }
+    ],
+    "Commodity Investing": [
+      {
+        "question": "Market participants in commodity futures market",
+        "answer": [
+          "<ol>",
+          "<li>Hedgers</li>",
+          "<li>Speculators</li>",
+          "<li>Arbitrageurs</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Relationship between the forward price and the spot price of a commodity",
+        "answer": [
+          "$$ F_0 = S_0 e^{rT} $$",
+          "Relationship holds for financial securities, but it does not hold for commodities"
+        ]
+      },
+      {
+        "question": "Forward price of commodity with storage costs",
+        "answer": [
+          "$$ F_0 = S_0 e^{(r+U)T} $$ ",
+          "$U$ - cost of storage as a percentage of the commodities' price"
+        ]
+      },
+      {
+        "question": "What is backwardation",
+        "answer": [
+          "the term structure will have a negative trend. <br> Futures price will be lower than the current spot.",
+          "<br> Investor can profit from taking long positoins"
+        ]
+      },
+      {
+        "question": "Forward price of commodity with storage costs and convenience yield",
+        "answer": [
+          "$$ F_0 = S_0 e^{(r+U-Y)T} $$ ",
+          "Convenience yield - benefit of holding physical commodity"
+        ]
+      },
+      {
+        "question": "Components of the return of a commodity futures",
+        "answer": [
+          "<ol>",
+          "<li>Spot return</li>",
+          "<li>Roll return</li>",
+          "<li>Collateral return</li>",
+          "<li>Rebalancing return</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Total return from commodity",
+        "answer": [
+          "total return $=$ spot return $+$ roll return $+$ collateral return $+$ rebalancing return"
+        ]
+      },
+      {
+        "question": "Excess return indices (reflects uncollateralized futures investment",
+        "answer": [
+          "excess return $=$ spot return $+$ roll return $=$ futures return"
+        ]
+      },
+      {
+        "question": "Roll return",
+        "answer": [
+          "$$ \\text{roll return } = \\frac{F_{t-1,t}-F_{t,T}}{F_{t-1,t}} = \\frac{S_{t}-F{t,T}}{S_{t}}$$ <br>",
+          "Roll return represents the profit (or loss) that results from the continous converence of futures prices towards spot prices<br>",
+          "When the commodity is in contago, roll return will be negative."
+        ]
+      },
+      {
+        "question": "Models of expected returns of commodity futures",
+        "answer": [
+          "<ol>",
+          "<li>CAPM</li>",
+          "<li>The Insurance Perspective - desire of commodity producers to hedge commodity price risk. Hedgers will need to offer speculators a risk premimum. This creates a NORMAL BACKWARDATOIN.: the futures price will be lower than the expected spot price int he future.</li>",
+          "<li>The Hedging Pressure Hypothesis - situation where the futures price is higher than the expected spot price in the future.</li>",
+          "<li>The Theory of Storage - difference between futures prices and spot prices is caused by the convenience yield and storage costs. Commodities difficult to stor should earn a positive convenience yield</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Difference between backwardation and normal backwardation",
+        "answer": [
+          "<ol>",
+          "<li>Normal backwardation indicates that the futures price is less than the expected spot price in the future</li>",
+          "<li>but not guarantee the ROLL RETURN will be positive</li>",
+          "</ol>"
+        ]
+      }
+    ]
+  }
 }
 

@@ -3,22 +3,47 @@ var router = express.Router();
 
 var questions = require('../database/questions.json');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    var question = {};
-    var keys = Object.keys(questions);
-    //var category = keys[Math.floor(Math.random() * keys.length)];
-    var category = "Corporate Finance"
-    var qList = questions[category];
-    var question = qList[Math.floor(Math.random() * qList.length)];
-    //var question = qList[qList.length - 1];
-  res.render('index', { category: category, "question": question["question"], "answer": question["answer"].join('\n')});
+
+var structure = [
+    [
+        "Alternative investment",
+        "Private RE investments",
+        "PE Valuation",
+        "Commodity Investing"
+
+    ]
+];
+
+
+router.get('/:chapterId/:studySessionId/:debugOption', function (req, res, next) {
+    var chapterId      = req.params.chapterId;
+    var studySessionId = req.params.studySessionId;
+    var debugOption    = req.params.debugOption;
+
+    var chapter        = structure[chapterId][0];
+    var studySession   = structure[chapterId][studySessionId];
+
+    var categoryJSON    = questions[chapter];
+    var subcategoryJSON = categoryJSON[studySession];
+
+    var question;
+
+    if (parseInt(debugOption)) {
+        question = subcategoryJSON[subcategoryJSON.length - 1];
+    } else {
+        question = subcategoryJSON[Math.floor(Math.random() * subcategoryJSON.length)];
+    }
+
+    res.render('index', {
+        category: chapter,
+        "question": question["question"],
+        "answer": question["answer"].join('\n')
+    });
 });
 
-router.get('/bootstrap', function(req, res, next) {
+router.get('/bootstrap', function (req, res, next) {
     res.render('bootstrap');
 });
-
 
 
 module.exports = router;
