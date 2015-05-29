@@ -8,17 +8,23 @@ var structure = [
     [
         "Alternative investment",
         "Private RE investments",
+        "Publicly Traded RE Securities",
         "PE Valuation",
         "Commodity Investing"
-
+    ],
+    [
+        "Fixed Income",
+        "Term Structure"
     ]
 ];
 
+k = 0
 
-router.get('/:chapterId/:studySessionId/:debugOption', function (req, res, next) {
+router.get('/:chapterId/:studySessionId/:debugOption/:question', function (req, res, next) {
     var chapterId      = req.params.chapterId;
     var studySessionId = req.params.studySessionId;
     var debugOption    = req.params.debugOption;
+    var questionID    = req.params.question;
 
     var chapter        = structure[chapterId][0];
     var studySession   = structure[chapterId][studySessionId];
@@ -28,14 +34,26 @@ router.get('/:chapterId/:studySessionId/:debugOption', function (req, res, next)
 
     var question;
 
-    if (parseInt(debugOption)) {
-        question = subcategoryJSON[subcategoryJSON.length - 1];
+
+    var questionNumber;
+
+    if (parseInt(debugOption) == 2) {
+        questionNumber = questionID;
+    } else if (parseInt(debugOption) == 1) {
+        questionNumber = subcategoryJSON.length - 1;
+    } else if (parseInt(debugOption) == 0) {
+        questionNumber = Math.floor(Math.random() * subcategoryJSON.length);
     } else {
-        question = subcategoryJSON[Math.floor(Math.random() * subcategoryJSON.length)];
+        questionNumber = (k++) % (subcategoryJSON.length);
     }
+
+    question = subcategoryJSON[questionNumber];
 
     res.render('index', {
         category: chapter,
+        studySession: studySession,
+        number : questionNumber,
+        all: subcategoryJSON.length - 1,
         "question": question["question"],
         "answer": question["answer"].join('\n')
     });

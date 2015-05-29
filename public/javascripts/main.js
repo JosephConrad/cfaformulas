@@ -9,8 +9,14 @@ ga('send', 'pageview');
 function showAnswer() {
     var button = $("#showAnswerButton");
     var box = $("#answerBox");
-    button.hide();
+    //button.hide();
+    $("#buttonLink")[0].setAttribute("onclick", "reload()");
+    $("#buttonLink").text('Reload');
     box.css("visibility", "visible");
     var box = $("#commentBox");
     box.css("visibility", "visible");
+}
+
+function reload() {
+    location.reload();
 }

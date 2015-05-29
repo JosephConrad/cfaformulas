@@ -154,33 +154,6 @@
   "Alternative investment": {
     "Private RE investments": [
       {
-        "question": "Debt service coverage ratio",
-        "answer": ["$$ DSCR = \\frac{\\text{first-year NOI}}{\\text{debt service}}$$"]
-      },
-      {
-        "question": "Loan-to-value",
-        "answer": ["$$ LTV = \\frac{\\text{loan amount}}{\\text{appraisal value}}$$"]
-      },
-      {
-        "question": "Maximum loan on a specific property that lender can offer",
-        "answer": ["$$ loan = \\min(DSCR, LTV)$$"]
-      },
-      {
-        "question": "Equity dividend rate (cash-on-cash return)",
-        "answer": [
-          "Measures the cash return on the amount of cash invested",
-          "$$ \\text{equity divident rate} = \\frac{\\text{first year cash flow}}{\\text{equity}}$$",
-          "It covers only one period (IRR measures the whole period"
-        ]
-      },
-      {
-        "question": "Return on NPI (NCREIF Property Index)",
-        "answer": [
-          "$$ return = \\frac{NOI - CapExpend + (MV_{end} - MV_{begin})}{MV_{begin}}$$",
-          "Members of NCREIF (mainly investment managers and pension fund sponsors), submit appraisal data quarterly)"
-        ]
-      },
-      {
         "question": "Basic forms of Real Estate Investments",
         "answer": [
           "<table class='table table-striped table-condensed table-bordered'>",
@@ -272,7 +245,6 @@
       {
         "question": "NOI (Net Operating Income) (Direct capitalization)",
         "answer": [
-
           "<table class='table table-striped table-condensed table-bordered'>",
           "<tr>",
           "<td>Rental income if fully occupied </td>",
@@ -294,6 +266,245 @@
           "</tr>",
           "<tr>",
           "<td>$=$ Net operating income</td>",
+          "</tr>",
+          "</table>",
+          "Operating expanses: insurance, property taxes, utiliteis, maintenance and repairs<br>",
+          "INTEREST EXPENSES  and INCOME TAXES are NOT operating expenses!"
+        ]
+      },
+      {
+        "question": " Capitalization rate - properties",
+        "answer": [
+          "<ol>",
+          "<li>cap rate = discount rate - growth rate</li>",
+          "<li>Cap rate applied to first-year NOI, discount rate applied to first-year and future NOI</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": " Capitalization rate - formula",
+        "answer": [
+          "$$ \\text{cap rate} = \\frac{NOI_1}{value}$$",
+          "Can be defined as CURRENT YIELD on investment (going-in cap rate)"
+        ]
+      },
+      {
+        "question": "Value when tenants are required to pay all expenses",
+        "answer": [
+          "$$value = \\frac{rent_1}{ARY}$$",
+          "ARY - all risk yield"
+        ]
+      },
+      {
+        "question": "Stabilized NO",
+        "answer": [
+          "$$value = \\frac{\\text{stabilized NOI}}{cap rate}$$",
+          "ARY - all risk yield"
+        ]
+      },
+      {
+        "question": "Gross income multiplierr",
+        "answer": [
+          "$$\\text{gross income multiplier} = \\frac{\\text{sales price}}{r-g}$$",
+          "ARY - all risk yield"
+        ]
+      },
+      {
+        "question": "Discounted Cash Flow Method (when growth is constant over time)",
+        "answer": [
+          "$$value= \\frac{NOI_1}{\\text{cap reate}}$$"
+        ]
+      },
+      {
+        "question": "Discounted Cash Flow Method (when growth rate is not constant",
+        "answer": [
+          "<ol>",
+          "<li>Forecast Terminal Value at the end of the holding period (use direct capitalization method if nOI growth is constant</li>",
+          "<li>Discount the NOI over the holding period and the terminal value to present</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Debt service coverage ratio",
+        "answer": ["$$ DSCR = \\frac{\\text{first-year NOI}}{\\text{debt service}}$$"]
+      },
+      {
+        "question": "Loan-to-value",
+        "answer": ["$$ LTV = \\frac{\\text{loan amount}}{\\text{appraisal value}}$$"]
+      },
+      {
+        "question": "Maximum loan on a specific property that lender can offer",
+        "answer": ["$$ loan = \\min(DSCR, LTV)$$"]
+      },
+      {
+        "question": "Equity dividend rate (cash-on-cash return)",
+        "answer": [
+          "Measures the cash return on the amount of cash invested",
+          "$$ \\text{equity divident rate} = \\frac{\\text{first year cash flow}}{\\text{equity}}$$",
+          "It covers only one period (IRR measures the whole period"
+        ]
+      },
+      {
+        "question": "Return on NPI (NCREIF Property Index)",
+        "answer": [
+          "$$ return = \\frac{NOI - CapExpend + (MV_{end} - MV_{begin})}{MV_{begin}}$$",
+          "Members of NCREIF (mainly investment managers and pension fund sponsors), submit appraisal data quarterly)"
+        ]
+      }
+    ],
+    "Publicly Traded RE Securities": [
+      {
+        "question": "Steps in COSTS APPROACH",
+        "answer": [
+          "<ol>",
+          "<li>Estimate the market value of the land (often using sales comparison approach)</li>",
+          "<li>Estimate the building's replacement cost (current construction cost)</li>",
+          "<li>Deduct depraciation including:</li>",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>Physical deterioration</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Functional obsolescence</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Locational obsolescence</td>",
+          "</tr>",
+          "<tr>",
+          "<td>Economic obsolescence</td>",
+          "</tr>",
+          "</table>",
+          "</ol>",
+          "Cost approach is consider the UPPER LIMIT"
+        ]
+      },
+      {
+        "question": "FFO",
+        "answer": [
+          "FFO adjusts reported earnings and is popular measure of the continuing operating income of a REIT or REOC",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>Accounting net earnings</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$+$ Depreciation expense/td>",
+          "</tr>",
+          "<tr>",
+          "<td>$+$ Deferred tax expenses (i.e., deferred tax liabilities)</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ gains from sales of property and debt restructuring</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$+$ losses from sales of property and debt restructuring</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ Funds from operations </td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "AFFO (Adjusted Funds From Operations), CAD (Cash available for distribution), FAD (funds available for distribution)",
+        "answer": [
+          "extention of FFO that is intended to be a more usefoul representation of current economic income",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>FFO from operations</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ Non-cash (straight line) rent adjustment</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ Recurring maintanance-type Cap Expend</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ AFFO (adjusted funds from operation)</td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "NAVPS = NAV/share",
+        "answer": [
+          "amount by which assets exceeed liabilities, using current market values rather than accounting values",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>estimated cash NOI</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$/$ assumed cap rate</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ estimated value of operating real estate </td>",
+          "</tr>",
+          "<tr>",
+          "<td>$+$ cash & accounts receivable</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ debt and other liabilities</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ net asset value</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$/$ shares outstanding</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ NAV/share</td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Pirce-to-FFO approach to REIT valutation",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>funds from opertions (FFO)</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$/$ shares outstanding</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ FFO per share </td>",
+          "</tr>",
+          "<tr>",
+          "<td>x sector average P/FFO multiple</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ NAV/share</td>",
+          "</tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Pirce-to-AFFO approach to REIT valutation",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr>",
+          "<td>funds from opertions (FFO)</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ non-cash rents(FFO)</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$-$ recurring maintenance-type capital expenditures</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ AFFO</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$/$ shares outstanding</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ FFO per share </td>",
+          "</tr>",
+          "<tr>",
+          "<td>x sector average P/FFO multiple</td>",
+          "</tr>",
+          "<tr>",
+          "<td>$=$ NAV/share</td>",
           "</tr>",
           "</table>"
         ]
@@ -704,6 +915,104 @@
           "<li>Normal backwardation indicates that the futures price is less than the expected spot price in the future</li>",
           "<li>but not guarantee the ROLL RETURN will be positive</li>",
           "</ol>"
+        ]
+      }
+    ]
+  },
+  "Fixed Income": {
+    "Term Structure": [
+      {
+        "question": " Forward price of a bond maturing at time $j+k$ delivered at time $j$ ",
+        "answer": [
+          "$$ F_{(j,k)} = \\frac{1}{[1+f(j,k)]^k} $$"
+        ]
+      },
+      {
+        "question": " Forward PRICING model ",
+        "answer": [
+          "Values forward contracts based on arbitrage-free pricing",
+          "$$ P_{(j+k)} = P_j F_{(j, k)}$$",
+          "where: <br>",
+          "$P_j$ - discount factor"
+        ]
+      },
+      {
+        "question": " Forward RATE model ",
+        "answer": [
+          "relates forward and spot rates:",
+          "$$ P_{(j+k)} = P_j F_{(j, k)}$$",
+          "$$ \\frac{1}{(1+S_{j+k})^{j+k}} = \\frac{1}{(1+S_{j})^{j}}  \\cdot  \\frac{1}{[1+f(j,k)]^k} $$",
+          "$$ (1+S_{j+k})^{j+k} =  (1+S_{j})^j  \\cdot  [1+f(j,k)]^k $$",
+          "Illustrates how forward rates and spot rates are related."
+        ]
+      },
+      {
+        "question": "Riding the yield curve (rolling down the yield curve)",
+        "answer": [
+          "Maturity matching - purchasing bonds that have a maturity equal to the investor's horizon<br>",
+          "Under this strategy investor will purchase bonds with maturities longer than his investment horizon."
+        ]
+      },
+      {
+        "question": " SFR ",
+        "answer": [
+          "$$\\sum_{t=1}^T \\frac{SFR_T}{(1+S_t)^t} + \\frac{1}{(1+S_t)^t} = 1$$",
+          "Calculate swap rate curve starting for soliving equation for 1, next 2, 3... period"
+        ]
+      },
+      {
+        "question": " Swap spread ",
+        "answer": [
+          "$$ \\text{swap spread}_t = \\text{swap rate}_t - \\text{Treasury yield}_t $$",
+          " They reflect LOWER CREDIT RISK OF GOVERNMENTS compared to the credit risk of banks"
+        ]
+      },
+      {
+        "question": " I-spread for a credit risky bond",
+        "answer": [
+          "YIELD on the RISKY BOND - SWAP RATE (for the same maturity) <br>",
+          "Compensation for LIQUIDITY and CREDIT RISK"
+        ]
+      },
+      {
+        "question": "The Z-Spread",
+        "answer": [
+          "Spread OVER THE ENITRE SPOT CURVE <br>",
+          "Term zero-volatility, because Z-spread is not appropriate to bonds with embedded options."
+        ]
+      },
+      {
+        "question": "TED spread (an acronym that combines T-bill with ED)",
+        "answer": [
+          "",
+          "interest rate on LOANS BETWEEN BANKS (three-month LIBOR) - interest rate on SHORT-TERM US GOVERNMENT BONDS (three-month T-bills). <br> ",
+          "Reflects the risk of lending to commercial banks"
+        ]
+      },
+      {
+        "question": "LIBOR-OIS spread (OIS - overnaith indexed swap)",
+        "answer": [
+          "LIBOR rate - OIS rate <br>",
+          "Overall indication of wellbeing of banking system"
+        ]
+      },
+      {
+        "question": "Managing yield curve risks",
+        "answer": [
+          "Effective duration - measures price sensitivity to small parallel shifts in the yield curve."
+        ]
+      },
+      {
+        "question": "Key rate duration ",
+        "answer": [
+          "Opposite to effective duration - superior in measuring the IMPACT OF NONPARALLEL SHIFTS in the yield curve.",
+          "$$ \\frac{\\Delta P}{P} = \\sum_i \\Delta D_i \\Delta r_i  $$"
+        ]
+      },
+      {
+        "question": " Managing yield curve shape risk",
+        "answer": [
+          "$$ \\frac{\\Delta P}{P} = - \\Delta D_L \\Delta x_L   - \\Delta D_S \\Delta x_S  - \\Delta D_C \\Delta x_C$$"
         ]
       }
     ]
