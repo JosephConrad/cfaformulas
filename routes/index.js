@@ -36,6 +36,22 @@ router.get('/solution-one', function(req, res) {
     res.send(countries)
 });
 
+
+router.get('/test/:chapterId/:studySessionId', function (req, res, next) {
+    var chapterId      = req.params.chapterId;
+    var studySessionId = req.params.studySessionId;
+
+    var chapter        = structure[chapterId][0];
+    var studySession   = structure[chapterId][studySessionId];
+
+    var categoryJSON    = questions[chapter];
+    var subcategoryJSON = categoryJSON[studySession];
+
+    console.log(subcategoryJSON);
+
+    res.send(subcategoryJSON);
+});
+
 router.get('/:chapterId/:studySessionId/:debugOption/:question', function (req, res, next) {
     var chapterId      = req.params.chapterId;
     var studySessionId = req.params.studySessionId;
