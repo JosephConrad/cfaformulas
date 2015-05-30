@@ -296,9 +296,9 @@
         ]
       },
       {
-        "question": "Stabilized NO",
+        "question": "Stabilized NOI",
         "answer": [
-          "$$value = \\frac{\\text{stabilized NOI}}{cap rate}$$",
+          "$$value = \\frac{\\text{stabilized NOI}}{\\text{cap rate}}$$",
           "ARY - all risk yield"
         ]
       },

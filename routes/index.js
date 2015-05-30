@@ -20,6 +20,22 @@ var structure = [
 
 k = 0
 
+router.get('/solution-one', function(req, res) {
+    var countries =
+        [
+            {"name": "China", "population": 1366450000},
+            {"name": "India", "population": 1248610000},
+            {"name": "USA", "population": 318651000},
+            {"name": "Indonesia", "population": 252164800},
+            {"name": "Brasil", "population": 203073000},
+            {"name": "Pakistan", "population": 188020000},
+            {"name": "Nigeria", "population": 178517000}
+        ]
+
+    console.log(countries);
+    res.send(countries)
+});
+
 router.get('/:chapterId/:studySessionId/:debugOption/:question', function (req, res, next) {
     var chapterId      = req.params.chapterId;
     var studySessionId = req.params.studySessionId;
