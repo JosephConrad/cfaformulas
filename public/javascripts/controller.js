@@ -1,3 +1,3 @@
-function UserCtrl($scope) {
-    $scope.users = users;
-}
+/**
+ * Created by konrad on 30/05/15.
+ */

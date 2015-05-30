@@ -91,6 +91,11 @@ router.get('/:chapterId/:studySessionId/:debugOption/:question', function (req, 
     });
 });
 
+router.get('/bootstrap', function (req, res) {
+    res.render('bootstrap');
+});
+
+
 router.get('/bootstrap', function (req, res, next) {
     res.render('bootstrap');
 });
