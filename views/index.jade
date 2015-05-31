@@ -11,12 +11,13 @@ block content
         .jumbotron(ng-controller="testQuestions")
             h2 {{category}}
             p.lead {{studySession}}
-            p.lead {{questionNumber}} / #{all}
+            p.lead {{questionNumber}} / {{questionsLength - 1}}
             p.lead#questionField(dynamic='q')
             p#showAnswerButton
                 a.btn.btn-lg.btn-success(href='#', id='buttonLink' role='button', ng:click="action()") {{actionLabel}}
             div.wrapping#answerField(dynamic='a')
-            h10.comment#commentBox (Please reload page to obtain a new question)
+            p#evalButtons
+                a.btn.btn-lg.btn-success(href='#', id='ok' role='button', ng-click="remove(questionNumber)") OK
 
         .row.marketing
 

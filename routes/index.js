@@ -52,6 +52,10 @@ router.get('/test/:chapterId/:studySessionId', function (req, res, next) {
     res.send(subcategoryJSON);
 });
 
+router.get('/:chapterId/:studySessionId/', function (req, res, next) {
+    res.render('index');
+});
+
 router.get('/:chapterId/:studySessionId/:debugOption/:question', function (req, res, next) {
     var chapterId      = req.params.chapterId;
     var studySessionId = req.params.studySessionId;

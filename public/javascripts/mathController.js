@@ -1,4 +1,4 @@
-var countryApp = angular.module('countryApp', []);
+var countryApp = angular.module('countryApp', [])
 
 countryApp.directive("mathjaxBind", function () {
     return {
@@ -25,10 +25,12 @@ countryApp.directive('dynamic', function ($compile) {
         replace: true,
         controller: ["$scope", "$element", "$attrs", function (scope, ele, attrs) {
             scope.$watch(attrs.dynamic, function (html) {
-                html = html.replace(/\$\$([^$]+)\$\$/g, "<span class=\"inline\" mathjax-bind=\"$1\"></span>");
-                html = html.replace(/\$([^$]+)\$/g, "<span class=\"equation\" mathjax-bind=\"$1\"></span>");
-                ele.html(html);
-                $compile(ele.contents())(scope);
+                if (html != null) {
+                    html = html.replace(/\$\$([^$]+)\$\$/g, "<span class=\"inline\" mathjax-bind=\"$1\"></span>");
+                    html = html.replace(/\$([^$]+)\$/g, "<span class=\"equation\" mathjax-bind=\"$1\"></span>");
+                    ele.html(html);
+                    $compile(ele.contents())(scope);
+                }
             });
         }]
     };
@@ -39,13 +41,34 @@ countryApp.controller('MyCtrl', function ($scope, $element) {
     $scope.html = ["$$ \\frac{4}{4}$$"].join('\n');
 });
 
-countryApp.controller('testQuestions', function ($scope, $rootScope, $http) {
-    $scope.category = "Fixed Income";
-    $scope.studySession = "Term Structure";
+countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $location) {
+    $scope.category = "Alternative Investment";
+    $scope.studySession = "Publicly Traded RE Securities";
     $scope.questionNumber = 0;
-    $http.get('http://localhost:3001/test/0/1').success(function (data) {
+
+    console.log($location);
+
+    var absoluteUrl = $location.absUrl().split('/');
+    console.log('http://localhost:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]);
+
+    $http.get('http://localhost:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
+
         console.log(data);
         $rootScope.questions = data;
+
+        $scope.questionsLength = data.length;
+
+        $scope.toLearn  = [];
+
+        for(var i = 0; i < $scope.questionsLength; i++) {
+            $scope.toLearn.push(i);
+        }
+
+        $scope.remove = function(item) {
+            var index = $scope.toLearn.indexOf(item);
+            $scope.toLearn.splice(index, 1);
+        }
+
         console.log(data[0]);
         $scope.q = data[0]["question"];
         $scope.a = data[0]["answer"].join('\n');
@@ -63,7 +86,7 @@ countryApp.controller('testQuestions', function ($scope, $rootScope, $http) {
             "nextQuestion": function () {
                 $("#buttonLink").text('Show answer');
                 $scope.actionLabel = "showAnswer";
-                $scope.questionNumber = $scope.questionNumber + 1;
+                $scope.questionNumber =  $scope.toLearn[($scope.toLearn.indexOf($scope.questionNumber)  + 1)  % ($scope.toLearn.length)];
                 $scope.action = $rootScope.actions["showAnswer"];
                 var box = $("#answerField");
                 box.css("visibility", "hidden");
