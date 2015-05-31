@@ -1,17 +1,33 @@
+//- layout.jade
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-
-    body
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='icon', href='#{pathToAssets}/docs/favicon.ico')
+        link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/bootstrap/css/jumbotron-narrow.css', rel='stylesheet')
+        script(src='/bootstrap/js/ie-emulation-modes-warning.js')
+        script(src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
+        script(src='/bootstrap/js/ie10-viewport-bug-workaround.js')
+        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js')
+        script(type='text/javascript', src="/javascripts/controller.js")
         script(type="text/x-mathjax-config").
             MathJax.Hub.Config({
-              tex2jax: {
-                inlineMath: [['$','$'], ['\\(','\\)']],
-                skipTags: ["script","noscript","style","textarea","code"]
-              }
+                tex2jax: {
+                    inlineMath: [['$','$'], ['\\(','\\)']],
+                    processEscapes: true
+                }
             });
-        script(type='text/javascript', src= "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
-
-      block content
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+        script(type='text/javascript', src="/javascripts/jquery-2.1.1.min.js")
+        script(type='text/javascript', src="/javascripts/mathController.js")
+        script(type='text/javascript', src="/javascripts/main.js")
+        block title
+            title Default title
+    body(ng-app="countryApp")
+        block content

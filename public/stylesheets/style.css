@@ -2,7 +2,21 @@
     font-size: large;
     word-wrap: break-word;
     text-align: left;
+    visibility: hidden;
 }
 .comment {
     word-wrap: break-word;
+}
+
+input[type="text"] {
+    width: 800px;
+}
+.equation{
+    display:inline-block;
+}
+.inline{
+    font-size: x-large;
+    display:block;
+    text-align: center;
+    margin: 20px;
 }

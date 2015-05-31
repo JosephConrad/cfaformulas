@@ -11,7 +11,7 @@ function showAnswer() {
     var box = $("#answerBox");
     //button.hide();
     $("#buttonLink")[0].setAttribute("onclick", "reload()");
-    $("#buttonLink").text('Reload');
+    $("#buttonLink").text('Next question');
     box.css("visibility", "visible");
     var box = $("#commentBox");
     box.css("visibility", "visible");

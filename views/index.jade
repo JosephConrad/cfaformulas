@@ -1,148 +1,33 @@
-doctype html
-html
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        meta(name='description', content='')
-        meta(name='author', content='')
+extends ./layout.jade
 
-        title CFA formulas
-        link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='icon', href='#{pathToAssets}/docs/favicon.ico')
-        link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
-        link(href='/bootstrap/css/jumbotron-narrow.css', rel='stylesheet')
+block title
+    title CFA formulas
 
-        script(src='/bootstrap/js/ie-emulation-modes-warning.js')
-        script(src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
-        script(src='/bootstrap/js/ie10-viewport-bug-workaround.js')
-        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js')
-        script(type='text/javascript', src="/javascripts/controller.js")
-        script(type="text/x-mathjax-config").
-            MathJax.Hub.Config({
-                tex2jax: {
-                    inlineMath: [['$','$'], ['\\(','\\)']],
-                    processEscapes: true
-                }
-            });
-        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-        script(type='text/javascript', src="/javascripts/jquery-2.1.1.min.js")
-        script(type='text/javascript', src="/javascripts/mathController.js")
-        script(type='text/javascript', src="/javascripts/main.js")
-        script(type="text/javascript").
-            var countryApp = angular.module('countryApp', []);
+block content
+    .container
+        .header
 
-            countryApp.directive("mathjaxBind", function () {
-                return {
-                    restrict: "A",
-                    scope: {
-                        text: "@mathjaxBind"
-                    },
-                    controller: ["$scope", "$element", "$attrs", function ($scope, $element, $attrs) {
-                        $scope.$watch('text', function (value) {
-            //                console.log(value);
-                            var $script = angular.element("<script type='math/tex'>")
-                                    .html(value == undefined ? "" : value);
-                            $element.html("");
-                            $element.append($script);
-                            MathJax.Hub.Queue(["Reprocess", MathJax.Hub, $element[0]]);
-                        });
-                    }]
-                };
-            });
+            h3.text-muted CFA formulas
+        .jumbotron(ng-controller="testQuestions")
+            h2 {{category}}
+            p.lead {{studySession}}
+            p.lead {{questionNumber}} / #{all}
+            p.lead#questionField(dynamic='q')
+            p#showAnswerButton
+                a.btn.btn-lg.btn-success(href='#', id='buttonLink' role='button', ng:click="action()") {{actionLabel}}
+            div.wrapping#answerField(dynamic='a')
+            h10.comment#commentBox (Please reload page to obtain a new question)
 
-            countryApp.directive('dynamic', function ($compile) {
-                return {
-                    restrict: 'A',
-                    replace: true,
-                    controller: ["$scope", "$element", "$attrs", function (scope, ele, attrs) {
-                        scope.$watch(attrs.dynamic, function (html) {
-                            var match = /\$([^$]+)\$/.exec(html);
-                            console.log(html.replace(new RegExp("\\$([^$]+)\\$","gm"),"foo"));
-                            html = html.replace(/\$\$([^$]+)\$\$/g, "<span mathjax-bind=\"$1\"></span>");
-                            html = html.replace(/\$([^$]+)\$/g, "<span mathjax-bind=\"$1\"></span>");
-                            console.log(html);
-                            ele.html(html);
-                            console.log(html);
-                            $compile(ele.contents())(scope);
-                        });
-                    }]
-                };
-            });
+        .row.marketing
 
+        .col-lg-6
+            h4 CFA
+            p
+                | Exam for investment and financial professionals.
+        .col-lg-6
+            h4 About
+            p
+                | Webpage delivers simple tool for learning formulas to the exam
 
-            countryApp.controller('MyCtrl', function ($scope, $element) {
-                $scope.html = "\\frac{5}{4} \\div \\frac{1}{6}";
-            });
-
-            countryApp.controller('testQuestions', function ($scope, $rootScope, $sce, $http) {
-                $scope.category = "Alternative investment";
-                $scope.studySession = "Private RE investments";
-                $scope.questionNumber = 0;
-                $http.get('http://localhost:3001/test/0/1').success(function (data) {
-                    console.log(data);
-                    $rootScope.questions = data;
-                    console.log(data[0]);
-                    $scope.q = data[0]["question"];
-                    $scope.a = $sce.trustAsHtml(data[0]["answer"].join('\n'));
-                    $scope.actionLabel = "showAnswer";
-                    $rootScope.actions = {
-                        "showAnswer": function () {
-                            $("#buttonLink").text('Reload');
-                            $scope.actionLabel = "nextQuestion";
-                            $scope.action = $rootScope.actions["nextQuestion"];
-                            $scope.questionNumber = $scope.questionNumber + 1;
-                            $scope.q = $rootScope.questions[$scope.questionNumber]["question"];
-                            $scope.a = $sce.trustAsHtml($rootScope.questions[$scope.questionNumber]["answer"].join('\n'));
-                        },
-                        "nextQuestion": function () {
-                            $("#buttonLink").text('Show answer');
-                            $scope.actionLabel = "showAnswer";
-                            $scope.action = $rootScope.actions["showAnswer"];
-                        }
-                    };
-
-                    $scope.action = $rootScope.actions["showAnswer"];
-
-
-                });
-                $scope.nextQuestion = function () {
-                    $scope.msg = 'clicked';
-                }
-            });
-
-
-    body(ng-app="countryApp" )
-        .container
-            .header
-
-                h3.text-muted CFA formulas
-            .jumbotron(ng-controller="testQuestions")
-                h2 {{category}}
-                p.lead {{studySession}}
-                p.lead #{number} / #{all}
-                p.lead#questionField {{q}}
-                p#showAnswerButton
-                    a.btn.btn-lg.btn-success(href='#', id='buttonLink' role='button', ng:click="action()") {{actionLabel}}
-                div.wrapping#answerField(ng-bind-html="a")
-                h10.comment#commentBox (Please reload page to obtain a new question)
-
-            .row.marketing
-                div(ng-controller="MyCtrl")
-                    input(type='text' ng-model='html')
-                    span(dynamic='html')
-
-
-    .col-lg-6
-        h4 CFA
-        p
-            | Exam for investment and financial professionals.
-    .col-lg-6
-        h4 About
-        p
-            | Webpage delivers simple tool for learning formulas to the exam
-
-
-
-    .footer
-        p &copy; CFA formulas 2015
+        .footer
+            p &copy; CFA formulas 2015
