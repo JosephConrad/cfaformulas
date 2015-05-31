@@ -64,7 +64,7 @@ countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $loc
     var absoluteUrl = $location.absUrl().split('/');
     console.log('http://localhost:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]);
 
-    $http.get('http://cfaformulas.herokuapp.com:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
+    $http.get('http://cfaformulas.herokuapp.com/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
 
         console.log(data);
         $rootScope.questions = data;
