@@ -48,6 +48,21 @@ html
                 };
             });
 
+            countryApp.directive('dynamic', function ($compile) {
+                return {
+                    restrict: 'A',
+                    replace: true,
+                    link: function (scope, ele, attrs) {
+                        scope.$watch(attrs.dynamic, function (html) {
+                            html = html.replace(/\$\$([^$]+)\$\$/g, "<span class=\"blue\" mathjax-bind=\"$1\"></span>");
+                            html = html.replace(/\$([^$]+)\$/g, "<span class=\"red\" mathjax-bind=\"$1\"></span>");
+                            ele.html(html);
+                            $compile(ele.contents())(scope);
+                        });
+                    }
+                };
+            });
+
 
             countryApp.controller('MyCtrl', function ($scope, $element) {
                 $scope.expression = "\\frac{5}{4} \\div \\frac{1}{6}";
@@ -112,15 +127,15 @@ html
 
 
     .col-lg-6
-                    h4 CFA
-                    p
-                        | Exam for investment and financial professionals.
-                .col-lg-6
-                    h4 About
-                    p
-                        | Webpage delivers simple tool for learning formulas to the exam
+        h4 CFA
+        p
+            | Exam for investment and financial professionals.
+    .col-lg-6
+        h4 About
+        p
+            | Webpage delivers simple tool for learning formulas to the exam
 
 
 
-            .footer
-                p &copy; CFA formulas 2015
+    .footer
+        p &copy; CFA formulas 2015
