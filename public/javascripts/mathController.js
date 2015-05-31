@@ -41,52 +41,67 @@ countryApp.controller('MyCtrl', function ($scope, $element) {
     $scope.html = ["$$ \\frac{4}{4}$$"].join('\n');
 });
 
+
+function nextZero(index, tab){
+    var i = (index + 1) % (tab.length)
+
+    while (i != index) {
+        console.log(i);
+        if (tab[i] == 0) return i;
+        i = (i + 1) % (tab.length)
+    }
+    return index;
+}
+
 countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $location) {
     $scope.category = "Alternative Investment";
     $scope.studySession = "Publicly Traded RE Securities";
     $scope.questionNumber = 0;
+    $scope.questionIndex = 0;
 
     console.log($location);
 
     var absoluteUrl = $location.absUrl().split('/');
     console.log('http://localhost:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]);
 
-    $http.get('http://cfaformulas.herokuapp.com/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
+    $http.get('http://cfaformulas.herokuapp.com:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
 
         console.log(data);
         $rootScope.questions = data;
 
         $scope.questionsLength = data.length;
-
+        $scope.shift = 0;
         $scope.toLearn  = [];
 
         for(var i = 0; i < $scope.questionsLength; i++) {
-            $scope.toLearn.push(i);
+            $scope.toLearn.push(0);
         }
 
-        $scope.remove = function(item) {
-            var index = $scope.toLearn.indexOf(item);
-            $scope.toLearn.splice(index, 1);
+        $scope.remove = function(index) {
+            $scope.toLearn[index] = 1;
         }
 
         console.log(data[0]);
         $scope.q = data[0]["question"];
         $scope.a = data[0]["answer"].join('\n');
-        $scope.actionLabel = "showAnswer";
         $rootScope.actions = {
             "showAnswer": function () {
-                $("#buttonLink").text('Next question');
-                $scope.actionLabel = "nextQuestion";
+                $("#buttonLink").text('Not OK');
+                $scope.actionLabel = "Not OK";
+
+                $scope.showOK = true;
                 $scope.action = $rootScope.actions["nextQuestion"];
-                $scope.q = $rootScope.questions[$scope.questionNumber]["question"];
-                $scope.a = $rootScope.questions[$scope.questionNumber]["answer"].join('\n');
+                $scope.a = $rootScope.questions[$scope.questionIndex]["answer"].join('\n');
                 var box = $("#answerField");
                 box.css("visibility", "visible");
             },
             "nextQuestion": function () {
                 $("#buttonLink").text('Show answer');
                 $scope.actionLabel = "showAnswer";
-                $scope.questionNumber =  $scope.toLearn[($scope.toLearn.indexOf($scope.questionNumber)  + 1)  % ($scope.toLearn.length)];
+                $scope.showOK = false;
+                $scope.questionIndex = nextZero($scope.questionIndex, $scope.toLearn);
+                console.log($scope.questionIndex);
+                $scope.q = $rootScope.questions[$scope.questionIndex]["question"];
                 $scope.action = $rootScope.actions["showAnswer"];
                 var box = $("#answerField");
                 box.css("visibility", "hidden");
@@ -94,6 +109,8 @@ countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $loc
         };
 
         $scope.action = $rootScope.actions["showAnswer"];
+        $scope.actionLabel = "showAnswer";
+        $scope.showOK = false;
 
 
     });
