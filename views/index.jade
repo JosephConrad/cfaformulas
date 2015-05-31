@@ -29,15 +29,18 @@ html
         script(type='text/javascript', src="/javascripts/jquery-2.1.1.min.js")
         script(type='text/javascript', src="/javascripts/mathController.js")
         script(type='text/javascript', src="/javascripts/main.js")
-        script(type='text/javascript', src="/javascripts/ng-mathjax.js.js")
         script(type="text/javascript").
             var countryApp = angular.module('countryApp', []);
 
             countryApp.directive("mathjaxBind", function () {
                 return {
                     restrict: "A",
+                    scope: {
+                        text: "@mathjaxBind"
+                    },
                     controller: ["$scope", "$element", "$attrs", function ($scope, $element, $attrs) {
-                        $scope.$watch($attrs.mathjaxBind, function (value) {
+                        $scope.$watch('text', function (value) {
+            //                console.log(value);
                             var $script = angular.element("<script type='math/tex'>")
                                     .html(value == undefined ? "" : value);
                             $element.html("");
@@ -52,20 +55,24 @@ html
                 return {
                     restrict: 'A',
                     replace: true,
-                    link: function (scope, ele, attrs) {
+                    controller: ["$scope", "$element", "$attrs", function (scope, ele, attrs) {
                         scope.$watch(attrs.dynamic, function (html) {
-                            html = html.replace(/\$\$([^$]+)\$\$/g, "<span class=\"blue\" mathjax-bind=\"$1\"></span>");
-                            html = html.replace(/\$([^$]+)\$/g, "<span class=\"red\" mathjax-bind=\"$1\"></span>");
+                            var match = /\$([^$]+)\$/.exec(html);
+                            console.log(html.replace(new RegExp("\\$([^$]+)\\$","gm"),"foo"));
+                            html = html.replace(/\$\$([^$]+)\$\$/g, "<span mathjax-bind=\"$1\"></span>");
+                            html = html.replace(/\$([^$]+)\$/g, "<span mathjax-bind=\"$1\"></span>");
+                            console.log(html);
                             ele.html(html);
+                            console.log(html);
                             $compile(ele.contents())(scope);
                         });
-                    }
+                    }]
                 };
             });
 
 
             countryApp.controller('MyCtrl', function ($scope, $element) {
-                $scope.expression = "\\frac{5}{4} \\div \\frac{1}{6}";
+                $scope.html = "\\frac{5}{4} \\div \\frac{1}{6}";
             });
 
             countryApp.controller('testQuestions', function ($scope, $rootScope, $sce, $http) {
@@ -122,8 +129,8 @@ html
 
             .row.marketing
                 div(ng-controller="MyCtrl")
-                    input(type='text', ng-model='expression')
-                    span(mathjax-bind='expression')
+                    input(type='text' ng-model='html')
+                    span(dynamic='html')
 
 
     .col-lg-6
