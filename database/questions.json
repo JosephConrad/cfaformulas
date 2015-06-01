@@ -2,12 +2,6 @@
   "Quantitative Methods": {
     "Correlation and Regression": [
       {
-        "question": "Mean reverting level",
-        "answer": [
-          "$$ \\frac{b_0}{(1-b_1)} $$"
-        ]
-      },
-      {
         "question": "Sample covariance",
         "answer": [
           "$$ cov_{XY} = \\frac{\\sum_{i=1}^n (X_i - \\bar{X})(Y_i - \\bar{Y}) }{n-1} $$"
@@ -245,32 +239,299 @@
       {
         "question": "Breush-Pagan chi-square ($\\chi^2$) test",
         "answer": [
+          "Done by regressing squared residuals on the independent variables",
+          "$$ BP = n \\cdot R_{resid}^2$$",
+          "with $k$ degrees of freedom<br>",
+          "where:<br>",
+          "$n$ - number of observations<br>",
+          "$R_{resid}^2$ - $R^2$ from a second regression of the squared residuals form the first regression on the independent variables<br>",
+          "$k$ - number of independent variables<br><br>",
+          "ONE TAILED TEST !!! - because problem is if the $R^2$ and $BP$ test statistics are too large<br><br>",
+          "Breusch-Pagan / Cook-Weisberg tests the null hypothesis that the error variances are all equal versus the alternative that the error variances are a multiplicative function of one or more variables. "
+        ]
+      },
+      {
+        "question": "Correcting heteroskedasticity",
+        "answer": [
           "<ol>",
-          "<li>Breush-Pagan chi-square ($\\chi^2$) test</li>",
-          "<li>Examining scatter plots of the residuals/li>",
+          "<li>Calculate ROBUST STANDARD ERRORS (also called <ol><li>white-corrected standard errors</li><li>heteroscedasticity-consistent standard errors)</li></ol>",
+          "<li>Use GENERALIZED LEAST SQUARES</li>",
           "</ol>"
+        ]
+      },
+      {
+        "question": "Rule in test rejection",
+        "answer": [
+          "Reject if:<br>",
+          "$$ |t| \\gt t_{critical}$$",
+          "$$ \\text{p-value} \\lt \\alpha $$"
+        ]
+      },
+      {
+        "question": "Serial correlation",
+        "answer": [
+          "Residual terms are correlated with one another"
+        ]
+      },
+      {
+        "question": "Effect of serial correlation on regression analysis",
+        "answer": [
+          "data is clustered - so there are small standard errors"
+        ]
+      },
+      {
+        "question": "Methods of detecting serial correlation",
+        "answer": [
+          "<ol>",
+          "<li>Durbin-Watson statistic</li>",
+          "<li>Residual plots </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Durbin-Watson statistic (DW)",
+        "answer": [
+          "$H_0$: the regression has no positive serial correlation<br><br>",
+          "$$ DW = \\frac{\\sum_{t=2}^T (\\hat{\\varepsilon}_t - \\hat{\\varepsilon}_{t-1})}{\\sum_{t=2}^T \\hat{\\varepsilon}_t} $$",
+          "where: <br>",
+          "$\\hat{\\varepsilon}_t$ - residual for period t<br><br>",
+          "If the sample is very large:",
+          "$$ DW \\approx 2(1-r)$$",
+          "$r$ - correlation coefficient between residuals from one period and those from the previous period<br><br>",
+          "If $DW \\gt  d_u$ - there is no evidence that the error terms are positively correlated"
+        ]
+      },
+      {
+        "question": "Correcting serial correlation",
+        "answer": [
+          "<ol>",
+          "<li>Adjust the coefficient standard errors (using Hansen method - also removes heteroskedasticity)</li>",
+          "<li>Improve the specification of the model</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Describe multicollinerality",
+        "answer": [
+          "when two or more independent variables (or linear combination of them) are highly CORRELATED"
+        ]
+      },
+      {
+        "question": "Detecting and correcting multicollinerality",
+        "answer": [
+          "<ol>",
+          "<li>Detect: conflicting t an F statistic</li>",
+          "<li>Correct: remove one of correlated variables</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Common misspecifiacations of the regression model",
+        "answer": [
+          "<ol>",
+          "<li>Omitting a variable</li>",
+          "<li>Variable should be transformed</li>",
+          "<li>Incorrectly pooling data</li>",
+          "<li>Using lagged dependent variable</li>",
+          "<li>Forecasting the past</li>",
+          "<li>Measuring independent variables with error</li>",
+          "</ol>"
+        ]
+      }
+    ],
+    "Time Series Analysis": [
+      {
+        "question": "Autoregressive model (AR)",
+        "answer": [
+          "$$ x_t = b_0 + b_1  x_{t+1} + \\varepsilon_t $$"
+        ]
+      },
+      {
+        "question": "Covariance stationary",
+        "answer": [
+          "<ol>",
+          "<li>$E[X] = const$(and finite)</li>",
+          "<li>$Var[X] = const$ (and finite)</li>",
+          "<li>Constant and finite covariance between values at any given lag</li>",
+          "<li>$MARCS$ (modified accelerated cost recovery system). Used for TAX purposes. Assets are classified into $3-,5-,7-,10-$year classes</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Mean reverting level",
+        "answer": [
+          "$$ \\frac{b_0}{(1-b_1)} $$"
+        ]
+      },
+      {
+        "question": "Test whether the autocorrelations are significantly different from zero",
+        "answer": [
+          "$$ t = \\frac{\\rho_{\\varepsilon_t \\varepsilon_{t-k}}}{1/ \\sqrt{T}}$$"
+        ]
+      },
+      {
+        "question": " Random walk ",
+        "answer": [
+          "$$ x_{t} = x_{t-1} + \\varepsilon_t$$"
+        ]
+      },
+      {
+        "question": " Random walk with drift ",
+        "answer": [
+          "$$ x_{t} =b_0 + b_1 x_{t-1} + \\varepsilon_t$$",
+          "Is not stationary, exibits UNIT ROOT, that is $b_1 = 0$"
+        ]
+      },
+      {
+        "question": "ARCH effect is detected by estimating",
+        "answer": [
+          "$$ \\varepsilon_t^2 = a_0 + a_1 \\varepsilon_{t-1}^2 + \\mu_t $$"
+        ]
+      },
+      {
+        "question": "Variance of ARCH series",
+        "answer": [
+          "$$ \\hat{\\sigma}_{t+1}^2 = \\hat{a}_0 +  \\hat{a}_1 \\hat{\\varepsilon}_t^2$$"
+        ]
+      },
+      {
+        "question": "Standard error of autocorrelation",
+        "answer": [
+          "$$ \\frac{1}{\\sqrt{T}}$$"
+        ]
+      },
+      {
+        "question": "Null hypothesis for unit root test",
+        "answer": [
+          "$H_0$: time series has a unit root<br>",
+          "Dickey-Fuller test computes the conventional t-statistic, which is then compared against the revised set of critical values computed by DF"
         ]
       }
     ]
   },
-  "Economics": [
-    {
-      "question": "Taylor rule",
-      "answer": "[$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$]"
-    },
-    {
-      "question": "",
-      "answer": ["$$ $$"]
-    },
-    {
-      "question": "Please give formula for CROSS RATES with bid-ask spreads",
-      "answer": "[$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$]"
-    },
-    {
-      "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
-      "answer": "v$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ]"
-    }
-  ],
+  "Economics": {
+    "Currency Exchange Rate": [
+      {
+        "question": "Taylor rule",
+        "answer": "[$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$]"
+      },
+      {
+        "question": "",
+        "answer": ["$$ $$"]
+      },
+      {
+        "question": "Please give formula for CROSS RATES with bid-ask spreads",
+        "answer": "[$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$]"
+      },
+      {
+        "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
+        "answer": "v$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ]"
+      }
+    ],
+    "Economic Growth": [
+      {
+        "question": "Preconditions of growth",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. Savings and investment</td></tr>",
+          "<tr><td>2. Financial markets and intermediaries </td></tr>",
+          "<tr><td>3. Political stability</td></tr>",
+          "<tr><td>4. Investment in human capital </td></tr>",
+          "<tr><td>5. Tax and regulatory systems </td></tr>",
+          "<tr><td>6. Free trade </td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Formula for AGGREGATED stock market valuation",
+        "answer": [
+          "$$ \\Delta P = \\Delta GDP  + \\Delta (E/GDP) + \\Delta (P/E) $$",
+          "Over the long term, the rate of aggreage stock market appreciation is limited to the sustainable growth rate of economy."
+        ]
+      },
+      {
+        "question": "Cobb-Douglas production function",
+        "answer": [
+          "$$ Y = T K^{\\alpha} L^{(1- \\alpha)}$$"
+        ]
+      },
+      {
+        "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
+        "answer": [
+          "$$ \\frac{Y}{L} = T \\left( \\frac{K}{L} \\right)^{\\alpha}$$",
+          "Labor productivity is similar to GDP per capita, a standard of living measure<br>",
+          "Assuming the number of worker and $\\alpha$ remain consant, increases can be gained by:",
+          "<ol>",
+          "<li>increasing capital per worker (CAPITAL DEEPENING)</li>",
+          "<li>improving technology (increasing TFP)</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Steady state",
+        "answer": [
+          "In steady state the marginal product of captital and marginal cost of capital are equal",
+          "$$ MPK =  r $$",
+          "$$ \\alpha Y/K = r $$",
+          "where: <br>",
+          "MPK = marginal product of capital"
+        ]
+      },
+      {
+        "question": "Growth accounting relations",
+        "answer": [
+          "In steady state the marginal product of captital and marginal cost of capital are equal",
+          "$$  \\Delta Y/Y = \\Delta A/A + \\alpha (\\Delta K/K) + (1 - \\alpha) \\cdot (\\Delta L/L)   $$",
+          "where: <br>",
+          "$\\alpha$ - share of INCOME paid to CAPITAL <br>",
+          "$1 - \\alpha$ - share of INCOME paid to LABOR"
+        ]
+      },
+      {
+        "question": "Growth accounting relations as long-term growth rates",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>growth rate in potential GDP </td></tr>",
+          "<tr><td>$=$ long-term growth rate of technology </td></tr>",
+          "<tr><td>$+ \\alpha$ (long-term growth rate of capital)</td></tr>",
+          "<tr><td>$+ (1- \\alpha)$ (long-term growth rate of labor)</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Labor productivity growth accounting equation (another way to calculate potential GDP growth)",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>growth rate in potential GDP </td></tr>",
+          "<tr><td>$=$ long-term growth rate in LABOR FORCE </td></tr>",
+          "<tr><td>$+$ long-term growth rate in LABOR PRODUCTIVITY</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Stimuli of economic growth ",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. Human capital </td></tr>",
+          "<tr><td>2. Physical capital (ICT and non-ICT)</td></tr>",
+          "<tr><td>3. Tech development</td></tr>",
+          "<tr><td>4. Public infrastructure</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "CLASSICAL growth theory ",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. Growth in real GDP/person is TEMPORARY - reverts to subsistence level</td></tr>",
+          "<tr><td>2. When the GDP per capita rises above the subsistance level, a POPULATION EXPOSION occurs, and GDP per capita is driven back to the subsistence level</tr>",
+          "</table>"
+        ]
+      }
+    ],
+    "Economic of Regulation": [
+    ]
+  },
   "Corporate Finance": [
     {
       "question": "Categories of capital budgeting projects",

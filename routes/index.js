@@ -7,7 +7,14 @@ var structure = [
     [
         "Quantitative Methods",
         "Correlation and Regression",
-        "Multiple Regression"
+        "Multiple Regression",
+        "Time Series Analysis"
+    ],
+    [
+        "Economics",
+        "Currency Exchange Rate",
+        "Economic Growth",
+        "Economic of Regulation"
     ],
     [
         "Alternative investment",
