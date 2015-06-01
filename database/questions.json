@@ -412,20 +412,72 @@
   "Economics": {
     "Currency Exchange Rate": [
       {
-        "question": "Taylor rule",
-        "answer": "[$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$]"
-      },
-      {
-        "question": "",
-        "answer": ["$$ $$"]
+        "question": "Bid-ask spread",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> bid-ask spread = ask quote - bid quote</td></tr>",
+          "</table>"
+        ]
       },
       {
         "question": "Please give formula for CROSS RATES with bid-ask spreads",
-        "answer": "[$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$]"
+        "answer": [
+          "$$ \\left( \\frac{A}{C} \\right)_{bid} =\\left( \\frac{A}{B} \\right)_{bid} \\cdot \\left( \\frac{B}{C} \\right)_{bid}  $$"
+        ]
       },
       {
-        "question": "Please give formula for LABOR PRODUCTIVITY (output per worker)",
-        "answer": "v$$ \\frac{Y}{L} = T \\cdot \\left( \\frac{K}{L} \\right)^{\\alpha}$$ ]"
+        "question": "Taylor rule",
+        "answer": [
+          "$$policy_{rate} = r_n + \\pi + \\alpha(\\pi - \\pi^*) + \\beta(y-y*) $$"
+        ]
+      },
+      {
+        "question": "Forward premium",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> forward premium = (forward price) - (spot price) = $F - S_0$</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Value of a forward currency contract prior to expiration",
+        "answer": [
+          "$$  V_t = \\frac{(FP_t - FP)(\\text{contract size})}{\\left[ 1 + R (\\frac{days}{360}) \\right] } $$"
+        ]
+      },
+      {
+        "question": "Covered interest rate parity",
+        "answer": [
+          "$$F = \\frac{\\left[  1+ R_A \\left( \\frac{days}{360} \\right) \\right]}{\\left[  1+ R_B \\left( \\frac{days}{360} \\right) \\right]} S_0 $$"
+        ]
+      },
+      {
+        "question": "Uncovered interest rate parity",
+        "answer": [
+          "$$ E(\\% \\Delta S)_{A/B} = R_A - R_B$$",
+          "where:<br>",
+          "$E(\\% \\Delta S)_{A/B}$ - expected change in spot price A/B"
+        ]
+      },
+      {
+        "question": "Relative purchasing power parity",
+        "answer": [
+          "$$ \\% \\Delta S(A/B) = Inflation_A - Inflation_B$$",
+          "where:<br>",
+          "$\\% \\Delta S(A/B)$ - change in spot price (A/B)"
+        ]
+      },
+      {
+        "question": "Fisher relation",
+        "answer": [
+          "$$  R_{nominal} = R_{real} + E(inflation) $$"
+        ]
+      },
+      {
+        "question": "International Fisher relation",
+        "answer": [
+          "$$  R_{nominal A} - R_{nominal B} =   E(inflation_A) - E(inflation_B) $$"
+        ]
       }
     ],
     "Economic Growth": [
@@ -527,9 +579,121 @@
           "<tr><td>2. When the GDP per capita rises above the subsistance level, a POPULATION EXPOSION occurs, and GDP per capita is driven back to the subsistence level</tr>",
           "</table>"
         ]
+      },
+      {
+        "question": "Sustainable growth rate of output ($G^*$)",
+        "answer": [
+          "$$  G^* = \\frac{\\theta}{(1 - \\alpha)} + \\Delta L  $$"
+        ]
+      },
+      {
+        "question": "Sustainable growth of output per worker ($g^*$)",
+        "answer": [
+          "$$  g^* = \\frac{\\theta}{(1 - \\alpha)}  $$",
+          "where: <br>",
+          "$1- \\alpha$ - labor's share of GDP"
+        ]
+      },
+      {
+        "question": "ENDOGENOUS growth theory ",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. Investment in capital can have constant returns (unlike neoclassical - there are diminishing)</td></tr>",
+          "<tr><td>2. Capital investment may therefore improve total factor productivity</tr>",
+          "<tr><td>3. Technological growth emerges as a result of investment in both PHYSICAL and HUMAN capital </td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "ABSOLUTE convergence hypothesis ",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> less developed countries will achieve equal living standards over time</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "CONDITIONAL convergence hypothesis ",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> convergence in living standards will only occur for countries with the same:",
+          "<ol>",
+          "<li>savings rates</li>",
+          "<li>population growth rates</li>",
+          "<li>production functions</li>",
+          "</ol>",
+          "</td></tr>",
+          "</table>",
+          "Under this theory, the growth rate will be higher in developed countries until they catch up."
+        ]
+      },
+      {
+        "question": "CLUB CONVERGENCE hypothesis ",
+        "answer": [
+          "Countries that are part of the club will grow rapidly to catch up their richer peers.<br>",
+          "Countries can join the club by making appropriate institutional changes."
+        ]
       }
     ],
     "Economic of Regulation": [
+    ]
+  },
+  "Financial Reporting": {
+    "Inventories": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Long-lived assets": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Intercorporate investments": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Employee Compensation": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Multinational Operations": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Quality of FR": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
+    ],
+    "Integration techniques": [
+      {
+        "question": "",
+        "answer": [
+          ""
+        ]
+      }
     ]
   },
   "Corporate Finance": [

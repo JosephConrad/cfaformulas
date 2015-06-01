@@ -17,6 +17,16 @@ var structure = [
         "Economic of Regulation"
     ],
     [
+        "Financial Reporting",
+        "Inventories",
+        "Long-lived assets",
+        "Intercorporate investments",
+        "Employee Compensation",
+        "Multinational Operations",
+        "Quality of FR",
+        "Integration techniques"
+    ],
+    [
         "Alternative investment",
         "Private RE investments",
         "Publicly Traded RE Securities",
