@@ -3,8 +3,12 @@ var router = express.Router();
 
 var questions = require('../database/questions.json');
 
-
 var structure = [
+    [
+        "Quantitative Methods",
+        "Correlation and Regression",
+        "Multiple Regression"
+    ],
     [
         "Alternative investment",
         "Private RE investments",
@@ -14,7 +18,9 @@ var structure = [
     ],
     [
         "Fixed Income",
-        "Term Structure"
+        "Term Structure",
+        'Arbitrage Free Valuation',
+        "Embedded Options"
     ]
 ];
 

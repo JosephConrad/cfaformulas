@@ -9,9 +9,9 @@ block content
 
             h3.text-muted CFA formulas
         .jumbotron(ng-controller="testQuestions")
-            h2 {{category}}
-            p.lead {{studySession}}
-            p.lead {{questionIndex}} / {{questionsLength - 1}}
+            h2 {{chapterName}}
+            p.lead {{sessionName}}
+            p.lead {{questionIndex + 1}} / {{questionsLength}}
             p.lead#questionField(dynamic='q')
             p#showAnswerButton
                 a.btn.btn-lg.btn-success(href='#', id='ok' ng-show="showOK" role='button', ng-click="remove(questionIndex); action()") OK

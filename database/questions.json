@@ -1,14 +1,258 @@
 {
-  "Quantitative Methods": [
-    {
-      "question": "Formula for correlation",
-      "answer": "[$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$]"
-    },
-    {
-      "question": "Mean reverting level",
-      "answer": "[$$ \\frac{b_0}{(1-b_1)} $$]"
-    }
-  ],
+  "Quantitative Methods": {
+    "Correlation and Regression": [
+      {
+        "question": "Mean reverting level",
+        "answer": [
+          "$$ \\frac{b_0}{(1-b_1)} $$"
+        ]
+      },
+      {
+        "question": "Sample covariance",
+        "answer": [
+          "$$ cov_{XY} = \\frac{\\sum_{i=1}^n (X_i - \\bar{X})(Y_i - \\bar{Y}) }{n-1} $$"
+        ]
+      },
+      {
+        "question": "Formula for correlation",
+        "answer": [
+          "$$ r_{XY} = \\frac{cov_{XY}}{(s_X)(s_Y)} $$"
+        ]
+      },
+      {
+        "question": "Limitations of correlation analysis",
+        "answer": [
+          "<ol>",
+          "<li>Outliers - </li>",
+          "<li>Spurious Correlation - may appear relationship between two variables when there is none</li>",
+          "<li>Nonlinear Relationships - correlation only measures linear relationships</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "A test of the hypothesis that the population correlation coefficient equals zero",
+        "answer": [
+          "$$ H_0 : \\rho = 0 $$",
+          "$$ H_a : \\rho \\neq 0 $$",
+          "Assumptions: the two populations are normally distributed, use $t$-test:",
+          "$$ t = \\frac{r \\sqrt{n-1}}{\\sqrt{1-r^2}} $$",
+          "Reject $H_0$, if $t_{critical}<t$, or $t < -t_{critical}$ <br>",
+          "r - sample correlation"
+        ]
+      },
+      {
+        "question": "Linear correlation assumptions (6)",
+        "answer": [
+          "<ol>",
+          "<li>Exists linear relationship</li>",
+          "<li>Independent variable is UNCORELLATED with residuals</li>",
+          "<li>$E[\\epsilon]= 0$ - residual term is zero</li>",
+          "<li>$E(\\epsilon_i^2) = \\sigma_{\\epsilon}^2$ - variance of the residual term is zero </li>",
+          "<li>$E(\\epsilon_i \\epsilon_j) = 0, j \\neq i$ - residual term is normally distributed </li>",
+          "<li>Residual term is noramlly distributed </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Regression line",
+        "answer": [
+          "$$ \\hat{Y}_i = \\hat{b}_0 + \\hat{b}_1 X_i$$",
+          "where:<br>",
+          "$\\hat{Y}_i$  - estimated value of $Y_i$ given $X_i$ <br>",
+          "$\\hat{b}_0$ - estimated intercept term <br>",
+          "$\\hat{b}_1$  - estimated slope coefficient "
+        ]
+      },
+      {
+        "question": "Slope coefficient $\\hat{b}_1$ for the regression line",
+        "answer": [
+          "$$ \\hat{b}_1 =\\frac{cov_{XY}}{\\sigma_X^2}$$"
+        ]
+      },
+      {
+        "question": "Intercept term $\\hat{b}_0$ for the regression line",
+        "answer": [
+          "$$  \\hat{b}_0  = \\bar{Y} - \\hat{b}_1 \\bar{X}$$"
+        ]
+      },
+      {
+        "question": "The confidence interval for the regression coefficient $b_1$ is between",
+        "answer": [
+          "$$ \\hat{b}_1 \\pm (t_c \\cdot s_{\\hat{b}_1})$$",
+          "where: <br>",
+          "$ s_{\\hat{b}_1} $ - standard error of the regression coefficient<br>",
+          "All confidence intervals take th e predicted value and then add and subtract the CRITICAL TEST STATISTIC multiplied by the VARIABILITY of the parameter estimate."
+        ]
+      },
+      {
+        "question": "Testing slope coefficient $b_1$  ",
+        "answer": [
+          "$$ t_{b_1} = \\frac{\\hat{b}_1 - b_1}{s_{\\hat{b}_1}} $$",
+          "Reject $H_0$, if $t_{critical}<t$, or $t < -t_{critical}$"
+        ]
+      },
+      {
+        "question": " Confidence intervals for predicted values ",
+        "answer": [
+          "The equation for confidence interval for a predicted value of $Y$:",
+          "$$ \\hat{Y} \\pm (t_c \\cdot s_f) $$",
+          "where:<br>",
+          "$t_c$ - critical value<br>",
+          "$s_f$ - standard error of forecast<br>"
+        ]
+      },
+      {
+        "question": "Analysis of variance - definition and basic equation",
+        "answer": [
+          "ANOVA is a statistical procedure for analyzing the total variability of the dependent variable",
+          "$$ SST = RSS + SSE $$"
+        ]
+      },
+      {
+        "question": "SST - definition and basic equation",
+        "answer": [
+          "SST = total variation in the dependent variable",
+          "$$ SST = \\sum (Y - \\bar{Y})^2$$"
+        ]
+      },
+      {
+        "question": "RSS - definition",
+        "answer": [
+          "RSS =  measures the EXPLAINED variation the independent variable",
+          "$$ RSS = \\sum_{i=1}^n (\\hat{Y}_i - \\bar{Y})^2$$"
+        ]
+      },
+      {
+        "question": "SSE - definition",
+        "answer": [
+          "RSS =  measures the UNEXPLAINED variation the independent variable",
+          "$$ SSE = \\sum_{i=1}^n ( Y_i - \\hat{Y}_i)^2$$"
+        ]
+      },
+      {
+        "question": "Regression $df$ and error $df$",
+        "answer": [
+          "regression $df = k$",
+          "error $df = n-k-1$"
+        ]
+      },
+      {
+        "question": "Rule for calculating mean ANOVA terms",
+        "answer": [
+          "divide appropriate sum of squares by its degrees of freedom",
+          "$$  MSR  = \\frac{RSS}{k} $$ ",
+          "$$  MSE  = \\frac{SSE}{n-k-1} $$ "
+        ]
+      },
+      {
+        "question": "F-statistic",
+        "answer": [
+          "F-test assesses how well independent variables, as a whole, explains the variation in the dependent variable ",
+          "$$ F = \\frac{MSR}{MSE} $$",
+          "In simple linear regression, $F = t_{b_1}^2$<br>",
+          "$$H_0 = b_1 = 0$$",
+          "$$H_a = b_1 \\neq 0$$",
+          "Decision rule: reject $H_0$ if $F \\gt F_c$<br>",
+          "If rejected, we can conclude that at least one of independent variables is significantly different from zero<br>",
+          "ALWAYS ONE TAILED !!!"
+        ]
+      },
+      {
+        "question": "Limitations of regression analysis",
+        "answer": [
+          "<ol>",
+          "<li>Parameter instability</li>",
+          "<li>The limited usefulness of regression models</li>",
+          "<li>The possibility of violation of assumptions</li>",
+          "</ol>"
+        ]
+      }
+    ],
+    "Multiple Regression": [
+      {
+        "question": "Interpreting $p$-values",
+        "answer": [
+          "$p$-value is the SMALLEST level of significance for which the NULL hypothesis can be REJECTED"
+        ]
+      },
+      {
+        "question": "Adjusted $R^2$",
+        "answer": [
+          "Reason: $R^2$ almost always increases as variables are added to the model",
+          "$$ R_a^2 = 1 - \\left[  \\left( \\frac{n-1}{n-k-1}  \\right) \\cdot (1-R^2) \\right] $$"
+        ]
+      },
+      {
+        "question": "What is dummy variable",
+        "answer": [
+          "when independent variable has BINARY nature"
+        ]
+      },
+      {
+        "question": "Main assumptions of the multiple regression model",
+        "answer": [
+          "<ol>",
+          "<li>Heteroskedasticiy</li>",
+          "<li>Serial correlation (autocorrelation)</li>",
+          "<li>Multicollinearity</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Heteroskedasticity",
+        "answer": [
+          "<ol>",
+          "<li>When variance of residual IS NOT CONSTANT</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "UNCONDITIONAL Heteroskedasticity",
+        "answer": [
+          "<ol>",
+          "<li>IS NOT RELATED to the level of the independent variables </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "conditional Heteroskedasticity",
+        "answer": [
+          "<ol>",
+          "<li>IS RELATED to the level of the independent variables </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Effects of heteroskedasticity",
+        "answer": [
+          "<ol>",
+          "<li>Standard errors are not RELIABLE estimates </li>",
+          "<li>the coefficient estimates aren't affected  </li>",
+          "<li>t-statistic unreliable (standard error smaller, t-statistc bigger, null hupothesis is rejected too often)</li>",
+          "<li>F-test unreliable </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Methods of detecting heteroskedasticity",
+        "answer": [
+          "<ol>",
+          "<li>Breush-Pagan chi-square ($\\chi^2$) test</li>",
+          "<li>Examining scatter plots of the residuals/li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Breush-Pagan chi-square ($\\chi^2$) test",
+        "answer": [
+          "<ol>",
+          "<li>Breush-Pagan chi-square ($\\chi^2$) test</li>",
+          "<li>Examining scatter plots of the residuals/li>",
+          "</ol>"
+        ]
+      }
+    ]
+  },
   "Economics": [
     {
       "question": "Taylor rule",
@@ -237,12 +481,6 @@
         ]
       },
       {
-        "question": "Highest and best use",
-        "answer": [
-          "highest and best use of a vacant site is the USE that would result in the HIGHEST VALUE for the land"
-        ]
-      },
-      {
         "question": "NOI (Net Operating Income) (Direct capitalization)",
         "answer": [
           "<table class='table table-striped table-condensed table-bordered'>",
@@ -305,14 +543,7 @@
       {
         "question": "Gross income multiplierr",
         "answer": [
-          "$$\\text{gross income multiplier} = \\frac{\\text{sales price}}{r-g}$$",
-          "ARY - all risk yield"
-        ]
-      },
-      {
-        "question": "Discounted Cash Flow Method (when growth is constant over time)",
-        "answer": [
-          "$$value= \\frac{NOI_1}{\\text{cap reate}}$$"
+          "$$\\text{gross income multiplier} = \\frac{\\text{sales price}}{r-g}$$"
         ]
       },
       {
@@ -387,7 +618,7 @@
           "<td>Accounting net earnings</td>",
           "</tr>",
           "<tr>",
-          "<td>$+$ Depreciation expense/td>",
+          "<td>$+$ Depreciation expense</td>",
           "</tr>",
           "<tr>",
           "<td>$+$ Deferred tax expenses (i.e., deferred tax liabilities)</td>",
@@ -479,7 +710,7 @@
         ]
       },
       {
-        "question": "Pirce-to-AFFO approach to REIT valutation",
+        "question": "Price-to-AFFO approach to REIT valuation",
         "answer": [
           "<table class='table table-striped table-condensed table-bordered'>",
           "<tr>",
@@ -498,7 +729,7 @@
           "<td>$/$ shares outstanding</td>",
           "</tr>",
           "<tr>",
-          "<td>$=$ FFO per share </td>",
+          "<td>$=$ AFFO per share </td>",
           "</tr>",
           "<tr>",
           "<td>x sector average P/FFO multiple</td>",
@@ -1013,6 +1244,170 @@
         "question": " Managing yield curve shape risk",
         "answer": [
           "$$ \\frac{\\Delta P}{P} = - \\Delta D_L \\Delta x_L   - \\Delta D_S \\Delta x_S  - \\Delta D_C \\Delta x_C$$"
+        ]
+      }
+    ],
+    "Arbitrage Free Valuation": [
+      {
+        "question": "Two types of arbitrage opportunities",
+        "answer": [
+          "<ol>",
+          "<li>VALUE ADDITIVITY - value of whole differs from the sum of the parts - profit can be earneg by STRIPPING or RECONSTRUCTION</li>",
+          "<li>DOMINANCE - one asset trades at a lower price than another asset with IDENTICAL characteristics</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Relations between interest rates in binaominal tree model",
+        "answer": [
+          "<ol>",
+          "Adjacent forward rates are TWO STANDARD DEVIATIONS APART",
+          "$$ i_{2, LU} = i_{2,LL} e^{2\\sigma} $$",
+          "$$ i_{2, LU} = i_{2,UL}$$",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Valuation of MBS",
+        "answer": [
+          "MBS should be valuated by Monte Carlo methods (it uses PATHWISE VALUATION - cash flows at a given point in time depends on the path tat interest rates followed up to that point"
+        ]
+      }
+    ],
+    "Embedded Options": [
+      {
+        "question": "Callable Bond",
+        "answer": [
+          "allows the ISSUER of the bond to retain the privilege of redeeming the bond at some point before the bond maturity"
+        ]
+      },
+      {
+        "question": "PUTABLE Bond",
+        "answer": [
+          "The HOLDER (INVESTOR) of the puttable bond has the right, but not the obligation, to demand early repayment of the principal"
+        ]
+      },
+      {
+        "question": "Value of call",
+        "answer": [
+          "$$ V_{call} = V_{stright} - V_{callable} $$",
+          "Option give value for issuer, hence its price must be lower than similar option-free bond, similary put",
+          "$$ V_{put} = V_{putable} - V_{stright} $$"
+        ]
+      },
+      {
+        "question": "Call rule",
+        "answer": [
+          "The value at any node where the bond is callable must be either the price at which the issuer will call the bond (the call price) or the computed value if the bond is not called, whichever is lower"
+        ]
+      },
+      {
+        "question": "When interests rate volatility increases",
+        "answer": [
+          "$$V_{\\text{call option}} \\uparrow, V_{\\text{put option}} \\uparrow, V_{\\text{callable bond}} \\downarrow, V_{\\text{putable bond}} \\uparrow  $$"
+        ]
+      },
+      {
+        "question": "How upward sloping yield curve affect value of options in bonds",
+        "answer": [
+          "$$V_{\\text{call}} \\downarrow, V_{\\text{put}} \\uparrow $$"
+        ]
+      },
+      {
+        "question": "OAS (Option Adjusted Spread)",
+        "answer": [
+          "<ol>",
+          "<li>spread added to each forward rate </li>",
+          "<li>makes that the sum of the PV of a credit risky bond's CF equals its market price</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Effective duration",
+        "answer": [
+          "$$ED = \\frac{BV_{- \\Delta y} - BV_{+ \\Delta y}} {2 \\cdot BV_0 \\cdot \\Delta y}$$"
+        ]
+      },
+      {
+        "question": "Effective convexity",
+        "answer": [
+          "$$EC = \\frac{BV_{- \\Delta y} + BV_{+ \\Delta y} -2BV_0} {BV_0 \\cdot \\Delta y^2}$$"
+        ]
+      },
+      {
+        "question": "Compare effective duration of callable, putable and straight bond",
+        "answer": [
+          "ED (callable) $\\leq$ ED (straight) <br>",
+          "ED (putable) $\\leq$ ED (straight)"
+        ]
+      },
+      {
+        "question": "Minimumal value of CONVERTIBLE BOND",
+        "answer": [
+          "max(conversion value, straight value)"
+        ]
+      },
+      {
+        "question": "Conversion value",
+        "answer": [
+          "conversion value = market price of stock $\\cdot$ convertion ratio"
+        ]
+      },
+      {
+        "question": "Market conversion price per share",
+        "answer": [
+          "The stock price at which an investor is indifferent between selling the bond and converting it",
+          "$$MCPPS = \\frac{\\text{market price of convertible bond}}{\\text{conversion ratio}}$$",
+          "where: <br>",
+          "MCPPS = market conversion price per share"
+        ]
+      },
+      {
+        "question": "Market conversion premium per share",
+        "answer": [
+          "Premium that investor are wiling to pay for the chance that the market price of the stock will rise above the market conversion price<br>",
+          "market conversion premium per share = market conversion price - stock's market price"
+        ]
+      },
+      {
+        "question": "Premium over straight value",
+        "answer": [
+          "Premium over straight value $= \\frac{\\text{market price of convertible bond}}{\\text{straight value}} -1$<br>",
+          "The greater the premium, the less attractive the convertible bond"
+        ]
+      },
+      {
+        "question": "CAPPED floater",
+        "answer": [
+          "contains an ISSUER option that prevents the coupon rate from RISING above a specified level, called CAP"
+        ]
+      },
+      {
+        "question": "Value of CAPPED floater",
+        "answer": [
+          "Value of capped floater = value of a 'straight' floater $-$ value of the embedded cap"
+        ]
+      },
+      {
+        "question": "FLOORED floater",
+        "answer": [
+          "options belong to INVESTOR and offers protection from falling interest rates"
+        ]
+      },
+      {
+        "question": "Value of FLOORED floater",
+        "answer": [
+          "Value of floored floater = value of a 'straight' floater $+$ value of the embedded floor"
+        ]
+      },
+      {
+        "question": "noncallable/nonputable convertible bond - equivalence",
+        "answer": [
+          "Investing in noncallable/nonputable convertible bond is equivalent to:",
+          "<ol>",
+          "<li>option-free bond</li>",
+          "<li>a call option on stock (equal to convertion ratio)",
+          "</ol>"
         ]
       }
     ]

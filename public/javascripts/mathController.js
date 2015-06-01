@@ -43,12 +43,12 @@ countryApp.controller('MyCtrl', function ($scope, $element) {
 
 
 function nextZero(index, tab){
-    var i = (index + 1) % (tab.length)
+    var i = (index + 1) % (tab.length + 1)
 
     while (i != index) {
         console.log(i);
         if (tab[i] == 0) return i;
-        i = (i + 1) % (tab.length)
+        i = (i + 1) % (tab.length + 1)
     }
     return index;
 }
@@ -59,17 +59,43 @@ countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $loc
     $scope.questionNumber = 0;
     $scope.questionIndex = 0;
 
+    var structure = [
+        [
+            "Quantitative Methods",
+            "Correlation and Regression",
+            "Multiple Regression"
+        ],
+        [
+            "Alternative investment",
+            "Private RE investments",
+            "Publicly Traded RE Securities",
+            "PE Valuation",
+            "Commodity Investing"
+        ],
+        [
+            "Fixed Income",
+            "Term Structure",
+            'Arbitrage Free Valuation',
+            "Embedded Options"
+        ]
+    ];
     console.log($location);
 
     var absoluteUrl = $location.absUrl().split('/');
     console.log('http://localhost:3001/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]);
 
-    $http.get('http://cfaformulas.herokuapp.com/test/'+absoluteUrl[3]+'/' + absoluteUrl[4]).success(function (data) {
+    $scope.chapter = absoluteUrl[3];
+    $scope.chapterName  =structure[$scope.chapter][0];
+    $scope.session = absoluteUrl[4];
+    $scope.sessionName = structure[$scope.chapter][$scope.session];
+
+    $http.get('http://localhost:3001/test/'+$scope.chapter+'/' + $scope.session).success(function (data) {
 
         console.log(data);
         $rootScope.questions = data;
 
         $scope.questionsLength = data.length;
+        $scope.questionIndex = data.length - 1;
         $scope.shift = 0;
         $scope.toLearn  = [];
 
@@ -82,8 +108,8 @@ countryApp.controller('testQuestions', function ($scope, $rootScope, $http, $loc
         }
 
         console.log(data[0]);
-        $scope.q = data[0]["question"];
-        $scope.a = data[0]["answer"].join('\n');
+        $scope.q = data[$scope.questionIndex]["question"];
+        $scope.a = data[$scope.questionIndex]["answer"].join('\n');
         $rootScope.actions = {
             "showAnswer": function () {
                 $("#buttonLink").text('Not OK');
