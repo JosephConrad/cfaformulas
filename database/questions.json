@@ -641,9 +641,119 @@
   "Financial Reporting": {
     "Inventories": [
       {
-        "question": "",
+        "question": "Formula for ending inventory",
         "answer": [
-          ""
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $=$ beginning inventory + purchases - COGS </td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "FIFO Inventory",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $=$ LIFO Reserve + LIFO Inventory </td></tr>",
+          "</table>",
+          "Once the LIFO inventory is converted to FIFO inventory, the accounting equation (assets = liabilities + equity) will be out of balance, for example:",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>LIFO Reserve $=$  150 </td></tr>",
+          "<tr><td>tax rate $=$ 40% </td></tr>",
+          "<tr><td>To convert the balance sheet to FIFO </td></tr>",
+          "<tr><td>1. increase inventory by the 150 </td></tr>",
+          "<tr><td>2. decrease cash by  60 (150 LIFO reserve x 40%)</td></tr>",
+          "<tr><td>3. increase stockholders' equity (retained earnings) by 90 (150 LIFO reserve x (1-40%))</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "FIFO COGS",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $=$ LIFO COGS - $\\Delta$ LIFO reserve  </td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Inventory valuation method",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> used in determining the carrying value on the balance sheet and in testing inventory for impairment </td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "Inventory valuation under IFRS",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $$ min(cost, NRV) $$ </td></tr>",
+          "</table>",
+          "where:<br>",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> NRV (net realizable value) </td></tr>",
+          "<tr><td> $=$ estimated SALES PRICE </td></tr>",
+          "<tr><td> $-$ estimated SELLING COSTS  </td></tr>",
+          "<tr><td> $-$ COMPLETION COSTS </td></tr>",
+          "</table>",
+          "if NRV < balance sheet cost:",
+          "<ol>",
+          "<li>the inventory is 'written down' to NRV</li>",
+          "<li>a loss is recognized in income statement </li>",
+          "</ol>",
+          "if there is subsequent recovery in value",
+          "<ol>",
+          "<li>the inventory can be 'written up' </li>",
+          "<li>a gain is recognized in the income statement </li>",
+          "<li>however, the amount of any such gain is limited to the amount previously recognized as a loss </li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Inventory valuation under GAAP",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $$ min(cost, market) $$ </td></tr>",
+          "</table>",
+          "where:<br>",
+          "Market is usually equal to REPLACEMENT COST, but:",
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td> $$ market \\in (NRV - NPM, NRV) $$ </td></tr>",
+          "</table>",
+          "if cost > market:",
+          "<ol>",
+          "<li>the inventory is 'written down' to market on balance sheet</li>",
+          "<li>a loss is recognized in income statement </li>",
+          "</ol>",
+          "if there is subsequent recovery in value:",
+          "<ol>",
+          "<li>no 'write up' is allowed</li>",
+          "<li>market value becomes the new cost basis</li>",
+          "</ol>"
+        ]
+      },
+      {
+        "question": "Reporting inventory above historical cost",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. is permitted under IFRS and GAAP </td></tr>",
+          "<tr><td>2, applies mainly to PRODUCERS and DEALERS of COMMODITY-LIKE PRODUCTS</td></tr>",
+          "</table>"
+        ]
+      },
+      {
+        "question": "LIFO results in",
+        "answer": [
+          "<table class='table table-striped table-condensed table-bordered'>",
+          "<tr><td>1. higher COGS </td></tr>",
+          "<tr><td>2. lower taxes</td></tr>",
+          "<tr><td>3. lower net income</td></tr>",
+          "<tr><td>4. lower inventory balances</td></tr>",
+          "<tr><td>5. lower working capital</td></tr>",
+          "<tr><td>6. higher cash flows</td></tr>",
+          "<tr><td>7. lower net and gross margins</td></tr>",
+          "<tr><td>8. lower current ratio</td></tr>",
+          "<tr><td>9. higher inventory turnover</td></tr>",
+          "<tr><td>10.higher debt-to-equity </td></tr>",
+          "</table>"
         ]
       }
     ],
